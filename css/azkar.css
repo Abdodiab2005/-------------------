@@ -1,0 +1,233 @@
+:root {
+  --mc: #027fff;
+  --sc: #2c3e50;
+  --c1: #faf7ef;
+  --c2: #072a40;
+  --c3: #188ca5;
+  --c4: #19b7bd;
+  --c5: #76d668;
+  --c6: #8baccd;
+  --c7: #ff0000;
+  font-size: 20px;
+}
+section {
+  background-color: var(--c2);
+}
+.buttonsContainer {
+  width: 100%;
+  height: 150px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 20px;
+  align-items: center;
+}
+.selectBtn {
+  width: 320px;
+  height: 55px;
+  border-radius: 15px;
+  color: var(--c1);
+  background-color: var(--mc);
+  font-size: 1.1rem;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  transition: 0.3s;
+}
+.selectBtn:hover {
+  scale: 1.15;
+  background-color: var(--c1);
+  color: var(--c2);
+}
+
+.cardContainer {
+  height: 550px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  width: 85%;
+  height: 80%;
+  border-radius: 30px;
+  /* From https://css.glass */
+  background: rgba(22, 178, 199, 0.48);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(7.9px);
+  -webkit-backdrop-filter: blur(7.9px);
+  border: 3px solid rgba(255, 255, 255, 0.69);
+  display: flex;
+}
+.movementBtns {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 35px;
+}
+.movementBtnsContainer {
+  background-color: var(--c2);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 10px;
+  border-radius: 35px;
+}
+#previous-Btn {
+  width: 80px;
+  height: 40px;
+  outline-color: none;
+  border: none;
+  color: var(--mc);
+  background-color: var(--c2);
+  cursor: pointer;
+  margin-left: 5px;
+  border-radius: 15px 0px 0px 15px;
+  border-right: 5px solid var(--c4);
+  font-size: 1.5rem;
+  transition: 0.4s;
+}
+#next-Btn {
+  width: 80px;
+  height: 40px;
+  outline-color: none;
+  border: none;
+  color: var(--mc);
+  background-color: var(--c2);
+  cursor: pointer;
+  margin-right: 5px;
+  border-radius: 0px 15px 15px 0px;
+  border-left: 5px solid var(--c4);
+  font-size: 1.5rem;
+  transition: 0.4s;
+}
+#next-Btn:hover,
+#previous-Btn:hover {
+  scale: 1.15;
+}
+.content-container {
+  background-color: #fff;
+  width: 100%;
+  height: 100%;
+}
+/* Start Of New Code */
+.mainContainer {
+  width: 100%;
+  height: 550px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.secondContainer {
+  color: var(--c2);
+  width: 90%;
+  height: 80%;
+  background-color: var(--sc);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid black;
+  border-radius: 45px 45px 0 0;
+}
+.nestedContainer {
+  border: 2px solid black;
+  width: 90%;
+  height: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+.movementBtns {
+  background-color: var(--c3);
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.movementBtnsContainer {
+  width: 95%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-radius: 35px;
+}
+#previous-Btn {
+  width: 80px;
+  height: 40px;
+  outline-color: none;
+  border: none;
+  color: var(--mc);
+  background-color: var(--c2);
+  cursor: pointer;
+  margin-left: 5px;
+  border-radius: 15px 0px 0px 15px;
+  border-right: 5px solid var(--c4);
+  font-size: 1.5rem;
+  transition: 0.4s;
+}
+#next-Btn {
+  width: 80px;
+  height: 40px;
+  outline-color: none;
+  border: none;
+  color: var(--mc);
+  background-color: var(--c2);
+  cursor: pointer;
+  margin-right: 5px;
+  border-radius: 0px 15px 15px 0px;
+  border-left: 5px solid var(--c4);
+  font-size: 1.5rem;
+  transition: 0.4s;
+}
+#next-Btn:hover,
+#previous-Btn:hover {
+  scale: 1.15;
+}
+.progress-bar {
+  width: 350px;
+  height: 50px;
+  background-color: var(--c);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 1px solid black;
+  border-radius: 30px;
+}
+.second-prog-bar {
+  background-color: #fff;
+  width: 13%;
+  height: 100%;
+  border-radius: 30px;
+}
+@media (max-width: 898px) {
+  .progress-bar {
+    width: 100px;
+    height: 50px;
+    background-color: var(--c7);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 1px solid black;
+    border-radius: 30px;
+  }
+  .second-prog-bar {
+    background-color: #fff;
+    width: 80%;
+    height: 100%;
+    border-radius: 30px;
+  }
+}
