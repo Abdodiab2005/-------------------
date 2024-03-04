@@ -1,0 +1,54 @@
+* {
+  font-family: "Vazirmatn", sans-serif;
+}
+:root {
+  --mc: #027fff;
+  --sc: #2c3e50;
+  --c1: #faf7ef;
+  --c2: #072a40;
+  --c3: #188ca5;
+  --c4: #19b7bd;
+  --c5: #76d668;
+  --c6: #8baccd;
+  --c7: #ff0000;
+  font-size: 20px;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+h2 {
+  height: 150px;
+  width: 100%;
+  font-size: 2rem;
+  text-align: center;
+}
+p {
+  height: 100px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+button {
+  width: 100px;
+  height: 35px;
+  border: none;
+  background-color: var(--mc);
+  border-radius: 15px;
+  margin: 15px;
+  border: 1px solid black;
+  transition: 0.3s;
+}
+a {
+  color: var(--c1);
+  transition: 0.3s;
+}
+button:hover,
+a:hover {
+  scale: 1.1;
+  background-color: var(--c1);
+  color: var(--c2);
+}
