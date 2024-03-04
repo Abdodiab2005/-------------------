@@ -68,6 +68,8 @@ section {
   align-items: flex-end;
   padding: 35px;
 }
+
+/* important  */
 .movementBtnsContainer {
   background-color: var(--c2);
   width: 100%;
@@ -77,38 +79,7 @@ section {
   padding: 10px;
   border-radius: 35px;
 }
-#previous-Btn {
-  width: 80px;
-  height: 40px;
-  outline-color: none;
-  border: none;
-  color: var(--mc);
-  background-color: var(--c2);
-  cursor: pointer;
-  margin-left: 5px;
-  border-radius: 15px 0px 0px 15px;
-  border-right: 5px solid var(--c4);
-  font-size: 1.5rem;
-  transition: 0.4s;
-}
-#next-Btn {
-  width: 80px;
-  height: 40px;
-  outline-color: none;
-  border: none;
-  color: var(--mc);
-  background-color: var(--c2);
-  cursor: pointer;
-  margin-right: 5px;
-  border-radius: 0px 15px 15px 0px;
-  border-left: 5px solid var(--c4);
-  font-size: 1.5rem;
-  transition: 0.4s;
-}
-#next-Btn:hover,
-#previous-Btn:hover {
-  scale: 1.15;
-}
+
 .content-container {
   background-color: #fff;
   width: 100%;
@@ -139,6 +110,7 @@ section {
   border: 2px solid black;
   width: 90%;
   height: 90%;
+  margin: 20px;
   /* From https://css.glass */
   background: rgba(255, 255, 255, 0.2);
   border-radius: 16px;
@@ -151,6 +123,7 @@ section {
   justify-content: center;
   text-align: center;
   align-items: center;
+  font-size: 1.5rem;
 }
 #info-content {
   position: absolute;
@@ -238,13 +211,24 @@ section {
   justify-content: center;
   border: 1px solid black;
   border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
 }
-.second-prog-bar {
-  background-color: #fff;
-  width: 13%;
-  height: 100%;
-  border-radius: 30px;
+#progress-num {
+  color: white;
 }
+.progress-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border: 2px solid white;
+  width: 250px;
+  border-radius: 25px;
+}
+
 @media (max-width: 898px) {
   .progress-bar {
     width: 100px;
