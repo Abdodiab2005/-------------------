@@ -13,6 +13,8 @@
 section {
   background-color: var(--c2);
 }
+
+/* Azkar Choosen Buttons */
 .buttonsContainer {
   width: 100%;
   height: 150px;
@@ -40,14 +42,59 @@ section {
   color: var(--c2);
 }
 
-.cardContainer {
-  height: 550px;
-  width: 100%;
+/* Movement Buttons (Next / Previous) */
+.movementBtns {
+  padding: 35px;
+  background-color: var(--c3);
+  width: 90%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
+.movementBtnsContainer {
+  background-color: var(--c2);
+  width: 95%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-radius: 35px;
+}
+#previous-Btn {
+  width: 80px;
+  height: 40px;
+  outline-color: none;
+  border: none;
+  color: var(--mc);
+  background-color: var(--c2);
+  cursor: pointer;
+  margin-left: 5px;
+  border-radius: 15px 0px 0px 15px;
+  border-right: 5px solid var(--c4);
+  font-size: 1.5rem;
+  transition: 0.4s;
+}
+#next-Btn {
+  width: 80px;
+  height: 40px;
+  outline-color: none;
+  border: none;
+  color: var(--mc);
+  background-color: var(--c2);
+  cursor: pointer;
+  margin-right: 5px;
+  border-radius: 0px 15px 15px 0px;
+  border-left: 5px solid var(--c4);
+  font-size: 1.5rem;
+  transition: 0.4s;
+}
+#next-Btn:hover,
+#previous-Btn:hover {
+  scale: 1.15;
+}
 
+/* ! content display  */
 .card {
   width: 85%;
   height: 80%;
@@ -61,31 +108,6 @@ section {
   border: 3px solid rgba(255, 255, 255, 0.69);
   display: flex;
 }
-.movementBtns {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  padding: 35px;
-}
-
-/* important  */
-.movementBtnsContainer {
-  background-color: var(--c2);
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  padding: 10px;
-  border-radius: 35px;
-}
-
-.content-container {
-  background-color: #fff;
-  width: 100%;
-  height: 100%;
-}
-/* Start Of New Code */
 .mainContainer {
   width: 100%;
   height: 550px;
@@ -140,7 +162,10 @@ section {
   height: 50px;
   color: #fff;
   top: 90%;
+  text-align: right;
 }
+
+/* ? side button  */
 #azkarBtn {
   width: 100px;
   height: 80%;
@@ -154,68 +179,8 @@ section {
 #azkarBtn:hover {
   scale: 1.1;
 }
-.movementBtns {
-  background-color: var(--c3);
-  width: 90%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.movementBtnsContainer {
-  width: 95%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px;
-  border-radius: 35px;
-}
-#previous-Btn {
-  width: 80px;
-  height: 40px;
-  outline-color: none;
-  border: none;
-  color: var(--mc);
-  background-color: var(--c2);
-  cursor: pointer;
-  margin-left: 5px;
-  border-radius: 15px 0px 0px 15px;
-  border-right: 5px solid var(--c4);
-  font-size: 1.5rem;
-  transition: 0.4s;
-}
-#next-Btn {
-  width: 80px;
-  height: 40px;
-  outline-color: none;
-  border: none;
-  color: var(--mc);
-  background-color: var(--c2);
-  cursor: pointer;
-  margin-right: 5px;
-  border-radius: 0px 15px 15px 0px;
-  border-left: 5px solid var(--c4);
-  font-size: 1.5rem;
-  transition: 0.4s;
-}
-#next-Btn:hover,
-#previous-Btn:hover {
-  scale: 1.15;
-}
-.progress-bar {
-  width: 350px;
-  height: 50px;
-  background-color: var(--c);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  border: 1px solid black;
-  border-radius: 30px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-}
+
+/** Counter */
 #progress-num {
   color: white;
 }

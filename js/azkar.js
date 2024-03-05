@@ -13,6 +13,7 @@ let appearContent = document.getElementById("text-content");
 let infoContent = document.getElementById("info-content");
 let zekrInfo = document.getElementById("zekr-info-content");
 let progNum = document.getElementById("progress-num");
+let CounterBtn = document.getElementById("azkarBtn");
 
 // !Morning Azkar
 const morningAzkar = [
@@ -49,12 +50,62 @@ const morningAzkar = [
   "أسْتَغْفِرُ اللهَ وَأتُوبُ إلَيْهِ",
 ];
 
+const morningAzkarInfo = [
+  "",
+  "من قالها حين يصبح أجير من الجن حتى يمسى ومن قالها حين يمسى أجير من الجن حتى يصبح",
+  "من قالها حين يصبح وحين يمسى كفته من كل شىء (الإخلاص والمعوذتين)",
+  "",
+  "",
+  "",
+  "من قالها موقنا بها حين يمسى ومات من ليلته دخل الجنة وكذلك حين يصبح",
+  "من قالها حين يصبح وحين يمسى كان حقا على الله أن يرضيه يوم القيامة",
+  "من قالها أعتقه الله من النار",
+  "من قالها حين يصبح أدى شكر يومه",
+  "من قالها كفاه الله ما أهمه من أمر الدنيا والأخرة",
+  "لم يضره من الله شيء",
+  "",
+  "",
+  "",
+  "",
+  "",
+  "",
+  "",
+  "",
+  "",
+  "",
+  "من صلى على حين يصبح وحين يمسى ادركته شفاعتى يوم القيامة",
+  "",
+  "",
+  "",
+  "",
+  "",
+  "ذكر طيب",
+  "كانت له عدل عشر رقاب، وكتبت له مئة حسنة، ومحيت عنه مئة سيئة، وكانت له حرزا من الشيطان",
+  "حُطَّتْ خَطَايَاهُ وَإِنْ كَانَتْ مِثْلَ زَبَدِ الْبَحْرِ. لَمْ يَأْتِ أَحَدٌ يَوْمَ الْقِيَامَةِ بِأَفْضَلَ مِمَّا جَاءَ بِهِ إِلَّا أَحَدٌ قَالَ مِثْلَ مَا قَالَ أَوْ زَادَ عَلَيْهِ",
+  "مائة حسنة، ومُحيت عنه مائة سيئة، وكانت له حرزاً من الشيطان حتى يمسى",
+];
+
+const morningAzkarCounter = [
+  0, 1, 3, 3, 1, 1, 3, 4, 1, 7, 3, 1, 1, 3, 3, 3, 1, 3, 1, 1, 3, 10, 3, 3, 3, 3,
+  100, 100, 100,
+];
+
 // Current Index To Control / Switch To Next / Previous Zekr
 let currentMorningAzkarIndex = 0;
+let morningAzkarInfoIndex = 0;
+let morningAzkarCounterIndex = 0;
 
-// function displays the Current Zekr By Inde
+// function displays the Current Zekr By Index
 function displayMorningAzkar() {
   appearContent.innerText = morningAzkar[currentMorningAzkarIndex];
+}
+
+function displayMorningAzkarInfo() {
+  zekrInfo.innerText = morningAzkarInfo[morningAzkarInfoIndex];
+}
+
+function displayMorningAzkarCounter() {
+  CounterBtn.innerText = morningAzkarCounter[morningAzkarCounterIndex];
 }
 
 // Next Zekr Function
@@ -63,6 +114,14 @@ function nextMorningAzkar() {
     currentMorningAzkarIndex++;
     progNum.innerText = `${currentMorningAzkarIndex} / 30`;
     displayMorningAzkar();
+  }
+  if (morningAzkarInfoIndex < morningAzkarInfo.length - 1) {
+    morningAzkarInfoIndex++;
+    displayMorningAzkarInfo();
+  }
+  if (morningAzkarCounterIndex < morningAzkarCounter.length - 1) {
+    morningAzkarCounterIndex++;
+    displayMorningAzkarCounter();
   }
 }
 
@@ -73,15 +132,31 @@ function prevMorningAzkar() {
     displayMorningAzkar();
     progNum.innerText = `${currentMorningAzkarIndex} / 30`;
   }
+  if (morningAzkarInfoIndex > 0) {
+    morningAzkarInfoIndex--;
+    displayMorningAzkarInfo();
+  }
+  if (morningAzkarCounterIndex > 0) {
+    morningAzkarCounterIndex--;
+    displayMorningAzkarCounter();
+  }
 }
 
 // Call the Functions on click Event
 morningAzkarBtn.onclick = () => {
   displayMorningAzkar();
+  displayMorningAzkarInfo();
   nextBtn.addEventListener("click", nextMorningAzkar);
   prevBtn.addEventListener("click", prevMorningAzkar);
   progNum.innerText = `${currentMorningAzkarIndex} / 30`;
   // morningAzkarBtn1.classList.add("act");
+};
+
+// Counter Button
+CounterBtn.onclick = () => {
+  if (CounterBtn.innerText > 0) {
+    CounterBtn.innerText--;
+  }
 };
 
 // ? progress bar
@@ -128,11 +203,61 @@ const EveningAzkar = [
   "سُبْحـانَ اللهِ وَبِحَمْـدِهِ",
 ];
 
+const EveningAzkarInfo = [
+  "من قالها حين يصبح أجير من الجن حتى يمسى ومن قالها حين يمسى أجير من الجن حتى يصبح",
+  "من قرأ آيتين من آخر سورة البقرة في ليلة كفتاه",
+  "من قالها حين يصبح وحين يمسى كفته من كل شىء (الإخلاص والمعوذتين)",
+  "",
+  "",
+  "",
+  "من قالها موقنا بها حين يمسى ومات من ليلته دخل الجنة وكذلك حين يصبح",
+  "من قالها حين يصبح وحين يمسى كان حقا على الله أن يرضيه يوم القيامة",
+  "من قالها أعتقه الله من النار",
+  "من قالها حين يمسى أدى شكر يومه",
+  "من قالها كفاه الله ما أهمه من أمر الدنيا والأخرة",
+  "لم يضره من الله شيء",
+  "",
+  "",
+  "",
+  "",
+  "",
+  "",
+  "",
+  "",
+  "",
+  "",
+  "",
+  "من صلى على حين يصبح وحين يمسى ادركته شفاعتى يوم القيامة",
+  "",
+  "",
+  "",
+  "",
+  "",
+  "كانت له عدل عشر رقاب، وكتبت له مئة حسنة، ومحيت عنه مئة سيئة، وكانت له حرزا من الشيطان",
+  "ذكر طيب",
+  "حُطَّتْ خَطَايَاهُ وَإِنْ كَانَتْ مِثْلَ زَبَدِ الْبَحْرِ. لَمْ يَأْتِ أَحَدٌ يَوْمَ الْقِيَامَةِ بِأَفْضَلَ مِمَّا جَاءَ بِهِ إِلَّا أَحَدٌ قَالَ مِثْلَ مَا قَالَ أَوْ زَادَ عَلَيْهِ",
+];
+
+const EveningAzkarCounter = [
+  0, 1, 1, 3, 3, 3, 1, 1, 3, 4, 1, 7, 3, 1, 1, 3, 3, 3, 1, 3, 1, 1, 3, 10, 3, 3,
+  3, 3, 100, 1, 100,
+];
+
 let eveningAzkarIndex = 0;
+let eveningAzkarInfoIndex = 0;
+let eveningAzkarCounterIndex = 0;
 
 // function displays the Current Zekr By Inde
 function displayEveningAzkar() {
   appearContent.innerText = EveningAzkar[eveningAzkarIndex];
+}
+
+function displayEveningAzkarInfo() {
+  zekrInfo.innerText = EveningAzkarInfo[eveningAzkarInfoIndex];
+}
+
+function displayEveningAzkarCounter() {
+  CounterBtn.innerText = EveningAzkarCounter[eveningAzkarCounterIndex];
 }
 
 // Next Zekr Function
@@ -142,6 +267,14 @@ function nextEveningAzkar() {
     displayEveningAzkar();
     progNum.innerText = `${eveningAzkarIndex} / 30`;
   }
+  if (eveningAzkarInfoIndex < EveningAzkarInfo.length - 1) {
+    eveningAzkarInfoIndex++;
+    displayEveningAzkarInfo();
+  }
+  if (eveningAzkarCounterIndex < EveningAzkarCounter.length - 1) {
+    eveningAzkarCounterIndex++;
+    displayEveningAzkarCounter();
+  }
 }
 
 // Prev Zekr Function
@@ -150,6 +283,14 @@ function prevEveningAzkar() {
     eveningAzkarIndex--;
     displayEveningAzkar();
     progNum.innerText = `${eveningAzkarIndex} / 30`;
+  }
+  if (eveningAzkarInfoIndex > 0) {
+    eveningAzkarInfoIndex--;
+    displayEveningAzkarInfo();
+  }
+  if (eveningAzkarCounterIndex > 0) {
+    eveningAzkarCounterIndex--;
+    displayEveningAzkarCounter();
   }
 }
 
@@ -181,11 +322,41 @@ const afterPrayAzkar = [
   "اللَّهُمَّ أَعِنِّي عَلَى ذِكْرِكَ وَشُكْرِكَ وَحُسْنِ عِبَادَتِكَ",
 ];
 
+const afterPrayAzkarInfo = [
+  "",
+  "",
+  "",
+  "",
+  "",
+  "",
+  "",
+  "ثلاث مرات بعد صلاتي الفجر والمغرب. ومرة بعد الصلوات الأخرى",
+  "ثلاث مرات بعد صلاتي الفجر والمغرب. ومرة بعد الصلوات الأخرى",
+  "ثلاث مرات بعد صلاتي الفجر والمغرب. ومرة بعد الصلوات الأخرى",
+  "[آية الكرسى - البقرة 255]",
+  "عَشْر مَرّات بَعْدَ المَغْرِب وَالصّـبْح",
+  "بَعْد السّلامِ من صَلاةِ الفَجْر",
+  "بعد صلاة الصبح والمغرب",
+  "",
+];
+
+const afterPrayAzkarCounter = [1, 1, 1, 33, 33, 33, 1, 3, 3, 3, 1, 10, 1, 7, 1];
+
 let afterPrayAzkarIndex = 0;
+let afterPrayAzkarInfoIndex = 0;
+let afterPrayAzkarCounterIndex = 0;
 
 // function displays the Current Zekr By Inde
 function displayAfterPrayAzkar() {
   appearContent.innerText = afterPrayAzkar[afterPrayAzkarIndex];
+}
+
+function displayAfterPrayAzkarInfo() {
+  zekrInfo.innerText = afterPrayAzkarInfo[afterPrayAzkarInfoIndex];
+}
+
+function displayAfterPrayAzkarCounter() {
+  CounterBtn.innerText = afterPrayAzkarCounter[afterPrayAzkarCounterIndex];
 }
 
 // Next Zekr Function
@@ -194,6 +365,14 @@ function nextAfterPrayAzkar() {
     afterPrayAzkarIndex++;
     displayAfterPrayAzkar();
     progNum.innerText = `${afterPrayAzkarIndex} / 14`;
+  }
+  if (afterPrayAzkarInfoIndex < afterPrayAzkarInfo.length - 1) {
+    afterPrayAzkarInfoIndex++;
+    displayAfterPrayAzkarInfo();
+  }
+  if (afterPrayAzkarCounterIndex < afterPrayAzkarCounter.length - 1) {
+    afterPrayAzkarCounterIndex++;
+    displayAfterPrayAzkarCounter();
   }
 }
 
@@ -204,11 +383,21 @@ function prevAfterPrayAzkar() {
     displayAfterPrayAzkar();
     progNum.innerText = `${afterPrayAzkarIndex} / 14`;
   }
+  if (afterPrayAzkarInfoIndex > 0) {
+    afterPrayAzkarInfoIndex--;
+    displayAfterPrayAzkarInfo();
+  }
+  if (afterPrayAzkarCounterIndex > 0) {
+    afterPrayAzkarCounterIndex--;
+    displayAfterPrayAzkarCounter();
+  }
 }
 
 // Call the Functions on click Event
 afterPrayAzkarBtn.onclick = () => {
   displayAfterPrayAzkar();
+  displayAfterPrayAzkarCounter();
+  displayAfterPrayAzkarInfo();
   nextBtn.addEventListener("click", nextAfterPrayAzkar);
   prevBtn.addEventListener("click", prevAfterPrayAzkar);
   progNum.innerText = `${afterPrayAzkarIndex} / 14`;
