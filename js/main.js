@@ -1,8 +1,6 @@
-let backBtn = document.getElementById("back");
-backBtn.onclick = () => {
-  location.replace("login.html");
+document.getElementById("go1").onclick = () => {
+  location.href = "../html/tasbeeh.html";
 };
-let tasbeehBtn = document.getElementById("tasbeeh");
-tasbeehBtn.onclick = () => {
-  location.replace("../html/tasbeeh.html")
-}
+document.getElementById("go2").onclick = () => {
+  location.href = "../html/azkar.html";
+};

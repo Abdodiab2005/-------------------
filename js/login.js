@@ -18,12 +18,12 @@ function sayError() {
 // replace the url when ok btn is clicked
 function kBtn() {
   location.replace("../index.html");
-  localStorage.setItem("سُبحان الله", 0);
+  localStorage.setItem("سبحان الله", 0);
   localStorage.setItem("الحمدلله", 0);
   localStorage.setItem("الله أكبر", 0);
   localStorage.setItem("لا إله إلا الله", 0);
   localStorage.setItem("أستغفر الله", 0);
-  localStorage.setItem("اللهم صلي وسلم وبارك على نبينا محمد", 0);
+  localStorage.setItem("اللهم صلي وسلم وبارك على سيدنا محمد", 0);
 }
 
 // Limit 20 Charachter only
