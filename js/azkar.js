@@ -9,7 +9,7 @@ let progBar = document.getElementById("prog-bar");
 let prevBtn = document.getElementById("previous-Btn");
 
 // display
-let appearContent = document.getElementById("text-content");
+let appearContent = document.getElementById("display-items");
 let infoContent = document.getElementById("info-content");
 let zekrInfo = document.getElementById("zekr-info-content");
 let progNum = document.getElementById("progress-num");

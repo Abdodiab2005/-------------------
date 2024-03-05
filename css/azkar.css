@@ -51,10 +51,14 @@ section {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-bottom: 80px;
+  border-right: 2px solid black;
+  border-left: 2px solid black;
+  border-bottom: 2px solid black;
 }
 .movementBtnsContainer {
   background-color: var(--c2);
-  width: 95%;
+  width: 80%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -110,7 +114,7 @@ section {
 }
 .mainContainer {
   width: 100%;
-  height: 550px;
+  height: 650px;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -124,7 +128,9 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 2px solid black;
+  border-right: 2px solid black;
+  border-left: 2px solid black;
+  border-top: 2px solid black;
   border-radius: 45px 45px 0 0;
 }
 .nestedContainer {
@@ -142,39 +148,40 @@ section {
   border: 1px solid rgba(255, 255, 255, 0.3);
   padding: 20px;
   display: flex;
-  justify-content: center;
-  text-align: center;
+  justify-content: space-between;
   align-items: center;
+  flex-direction: column;
+  text-align: center;
+
   font-size: 1.5rem;
 }
 #info-content {
   position: absolute;
-  right: 45%;
-  width: 250px;
-  height: 50px;
   color: #fff;
-  top: 50%;
 }
 #zekr-info-content {
   position: absolute;
-  right: 18%;
-  width: 600px;
+  right: 8%;
+  width: 100%;
   height: 50px;
   color: #fff;
-  top: 90%;
+  top: 70%;
   text-align: right;
+  font-size: 1rem;
+  color: var(--c5);
 }
 
 /* ? side button  */
 #azkarBtn {
-  width: 100px;
-  height: 80%;
-  margin: 20px;
+  width: 90%;
+  height: 10%;
   border-radius: 10px;
   border: none;
   background-color: var(--c3);
   cursor: pointer;
   transition: 0.3s;
+  color: var(--c1);
+  font-size: 1rem;
 }
 #azkarBtn:hover {
   scale: 1.1;
@@ -195,20 +202,67 @@ section {
 }
 
 @media (max-width: 898px) {
-  .progress-bar {
-    width: 100px;
-    height: 50px;
-    background-color: var(--c7);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    border: 1px solid black;
-    border-radius: 30px;
+  .buttonsContainer {
+    height: 450px;
+    margin-bottom: 20px;
   }
-  .second-prog-bar {
-    background-color: #fff;
-    width: 80%;
-    height: 100%;
-    border-radius: 30px;
+  .selectBtn {
+    width: 90%;
+    height: 50px;
+  }
+  #text-content,
+  #zekr-info-content {
+    font-size: 0.9rem;
+  }
+  #zekr-info-content {
+    max-width: 80%;
+    right: 10%;
+    font-size: 0.65rem;
+    top: 70%;
+    color: var(--c4);
+  }
+  #progress-num {
+    font-size: 0.7rem;
+  }
+  .progress-container {
+    width: 25%;
+  }
+  #next-Btn,
+  #previous-Btn {
+    scale: 0.8;
+  }
+  #next-Btn:hover,
+  #previous-Btn:hover {
+    scale: 0.9;
+  }
+  .movementBtnsContainer {
+    width: 100%;
+  }
+  #azkarBtn {
+    width: 100%;
+    height: 10%;
+    border-radius: 10px;
+    border: none;
+    background-color: var(--c3);
+    cursor: pointer;
+    transition: 0.3s;
+    color: var(--c1);
+    font-size: 1rem;
+  }
+  #azkarBtn:hover {
+    scale: 1.1;
+  }
+  .nestedContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+  }
+  .mainContainer {
+    height: 750px;
+  }
+  #display-items {
+    margin-top: 20px;
+    padding-top: 20px;
   }
 }
