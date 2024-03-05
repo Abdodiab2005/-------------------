@@ -14,7 +14,15 @@ let infoContent = document.getElementById("info-content");
 let zekrInfo = document.getElementById("zekr-info-content");
 let progNum = document.getElementById("progress-num");
 let CounterBtn = document.getElementById("azkarBtn");
+let visitors;
+if (visitors === undefined) {
+  visitors = 0;
+}
 
+window.onload = () => {
+  visitors++;
+  console.log(visitors);
+};
 // !Morning Azkar
 const morningAzkar = [
   "من فضائل الذكر عموما وأذكار الصباح والمساء خصوصا ما جاء في الصحيحين وغيرهما أن رسول الله صلى الله عليه وسلم قال: من قال لا إله إلا الله وحده لا شريك له له الملك وله الحمد وهو على كل شيء قدير في يوم مائة مرة كانت له عدل عشر رقاب، وكتبت له مائة حسنة، ومحيت عنه مائة سيئة، وكانت له حرزا من الشيطان يومه ذلك حتى يمسي، ولم يأت أحد بأفضل مما جاء به إلا أحد عمل أكثر من ذلك.",
