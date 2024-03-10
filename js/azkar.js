@@ -552,7 +552,7 @@ const befSleepAzkar = [
   "الْحَمْدُ لِلَّهِ",
   "اللَّهُ أَكْبَرُ",
   "آمَنَ الرَّسُولُ بِمَا أُنْزِلَ إِلَيْهِ مِنْ رَبِّهِ وَالْمُؤْمِنُونَ ۚ كُلٌّ آمَنَ بِاللَّهِ وَمَلَائِكَتِهِ وَكُتُبِهِ وَرُسُلِهِ لَا نُفَرِّقُ بَيْنَ أَحَدٍ مِنْ رُسُلِهِ ۚ وَقَالُوا سَمِعْنَا وَأَطَعْنَا ۖ غُفْرَانَكَ رَبَّنَا وَإِلَيْكَ الْمَصِيرُ. لَا يُكَلِّفُ اللَّهُ نَفْسًا إِلَّا وُسْعَهَا لَهَا مَا كَسَبَتْ وَعَلَيْهَا مَا اكْتَسَبَتْ رَبَّنَا لَا تُؤَاخِذْنَا إِنْ نَسِينَا أَوْ أَخْطَأْنَا رَبَّنَا وَلَا تَحْمِلْ عَلَيْنَا إِصْرًا كَمَا حَمَلْتَهُ عَلَى الَّذِينَ مِنْ قَبْلِنَا رَبَّنَا وَلَا تُحَمِّلْنَا مَا لَا طَاقَةَ لَنَا بِهِ وَاعْفُ عَنَّا وَاغْفِرْ لَنَا وَارْحَمْنَا أَنْتَ مَوْلَانَا فَانْصُرْنَا عَلَى الْقَوْمِ الْكَافِرِينَ",
-  "قراءة سورة الملك",
+  "",
 ];
 
 const befSleepAzkarInfo = [
@@ -631,11 +631,20 @@ function nextbefSleepAzkar() {
   if (BefSleepAzkarBasmalaIndex < BefSleepAzkarBasmala.length - 1) {
     BefSleepAzkarBasmalaIndex++;
     displaybefSleepAzkarBasmala();
-  }
-  if (befSleepAzkarIndex === 14) {
-    suratElmulkPopup();
+    if (befSleepAzkarIndex === 14) {
+      var suratElmulkBtn = document.createElement("button");
+      suratElmulkBtn.classList.add("btn");
+      suratElmulkBtn.classList.add("surah-btn");
+      suratElmulkBtn.innerText = "قراءة سورة الملك";
+      appearContent.appendChild(suratElmulkBtn);
+      suratElmulkBtn.onclick = () => {
+        suratElmulk();
+      };
+    }
   }
 }
+
+let funcStatus = false;
 
 // Prev Zekr Function
 function prevbefSleepAzkar() {
@@ -656,9 +665,6 @@ function prevbefSleepAzkar() {
     BefSleepAzkarBasmalaIndex--;
     displaybefSleepAzkarBasmala();
   }
-  if (befSleepAzkarIndex !== 14) {
-    suratElmulkPopup = null;
-  }
 }
 
 // Call the Functions on click Event
@@ -671,15 +677,6 @@ befSleepAzkarBtn.onclick = () => {
   prevBtn.addEventListener("click", prevbefSleepAzkar);
   progNum.innerText = `${befSleepAzkarIndex + 1} / 15`;
 };
-
-function suratElmulkPopup() {
-  CounterBtn.onclick = () => {
-    if (CounterBtn.innerText > 0) {
-      CounterBtn.innerText--;
-      suratElmulk();
-    }
-  };
-}
 
 // !After Sleep Azkar
 const aftSleepAzkar = [
@@ -747,9 +744,19 @@ aftSleepBtn.onclick = () => {
 // popups
 function suratElmulk() {
   Swal.fire({
-    title: "<strong>سورة الملك</strong>",
+    title: `<strong class="surah-title">سورة الملك</strong>`,
     html: `
     <p>
+    <span class="a3oz">
+      أعوذ بالله من الشيطان الرجيم
+    </span>
+    <br>
+    <span class="basmala2">
+    بِسۡمِ ٱللَّهِ ٱلرَّحۡمَٰنِ ٱلرَّحِيمِ
+    </span>
+<br>
+<br>
+
     تَبَارَكَ الَّذِي بِيَدِهِ الْمُلْكُ وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ (1)
 
     الَّذِي خَلَقَ الْمَوْتَ وَالْحَيَاةَ لِيَبْلُوَكُمْ أَيُّكُمْ أَحْسَنُ عَمَلا وَهُوَ الْعَزِيزُ الْغَفُورُ (2)
@@ -854,6 +861,9 @@ function next2() {
   
   قُلْ أَرَأَيْتُمْ إِنْ أَصْبَحَ مَاؤُكُمْ غَوْرًا فَمَن يَأْتِيكُم بِمَاء مَّعِينٍ (30)
   </p>
+  <br>
+  <br>
+  <span class="surah-end"> صدق الله العظيم </span>
   `,
     focusConfirm: false,
     confirmButtonText: `

@@ -13,6 +13,26 @@
 section {
   background-color: var(--c2);
 }
+.btn {
+  width: 200px;
+  height: 70px;
+  font-size: 1.2rem;
+  color: var(--c1);
+  background-color: var(--mc);
+  border-radius: 15px;
+  font-weight: 600;
+  border: 1px solid var(--c1);
+  outline: none;
+  cursor: pointer;
+  transition: 0.3s;
+  position: fixed;
+}
+.btn:hover {
+  scale: 1.1;
+  background-color: var(--c1);
+  color: var(--c2);
+  border: 1px solid var(--mc);
+}
 
 /* Azkar Choosen Buttons */
 .buttonsContainer {
@@ -23,7 +43,6 @@ section {
   justify-content: space-around;
   padding: 20px;
   align-items: center;
-  
 }
 .selectBtn {
   width: 320px;
@@ -174,7 +193,7 @@ section {
 }
 
 /* ? side button  */
-#azkarBtn {
+.azkarBtn {
   width: 90%;
   height: 10%;
   border-radius: 10px;
@@ -185,7 +204,7 @@ section {
   color: var(--c1);
   font-size: 1rem;
 }
-#azkarBtn:hover {
+.azkarBtn:hover {
   scale: 1.1;
 }
 
@@ -202,14 +221,37 @@ section {
   width: 250px;
   border-radius: 25px;
 }
-#display-items{
+#display-items {
   font-size: 1.2rem;
 }
-.basmala{
+.basmala {
   color: #76d668;
 }
+.basmala2,
+.a3oz,
+.surah-end {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #ff0000;
+}
+.surah-btn-container {
+  width: 100%;
+  display: flex;
 
-@media (max-width: 898px) {
+  justify-content: center;
+  align-items: center;
+}
+.surah-btn {
+  position: absolute;
+  left: 40%;
+  top: 35%;
+}
+.surah-title{
+  color: var(--mc);
+}
+
+
+@media (max-width: 800px) {
   .buttonsContainer {
     height: 450px;
     margin-bottom: 20px;
@@ -246,7 +288,7 @@ section {
   .movementBtnsContainer {
     width: 100%;
   }
-  #azkarBtn {
+  .azkarBtn {
     width: 100%;
     height: 10%;
     border-radius: 10px;
@@ -257,7 +299,7 @@ section {
     color: var(--c1);
     font-size: 1rem;
   }
-  #azkarBtn:hover {
+  .azkarBtn:hover {
     scale: 1.1;
   }
   .nestedContainer {
@@ -268,5 +310,15 @@ section {
   }
   .mainContainer {
     height: 750px;
+  }
+  .surah-btn {
+    position: absolute;
+    top: 35%;
+    left: 20%;
+  }
+  .btn{
+    width: 150px;
+    height: 50px;
+    font-size: 0.85rem;
   }
 }
