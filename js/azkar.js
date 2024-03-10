@@ -2,6 +2,8 @@
 let morningAzkarBtn = document.getElementById("morningAzkarBtn");
 let eveningAzkarBtn = document.getElementById("EveningAzkarBtn");
 let afterPrayAzkarBtn = document.getElementById("AfterPrayAzkarBtn");
+let befSleepBtn = document.getElementById("befSleepAzkarBtn");
+let aftSleepBtn = document.getElementById("aftSleepAzkarBtn");
 
 // Control Buttons
 let nextBtn = document.getElementById("next-Btn");
@@ -14,6 +16,7 @@ let infoContent = document.getElementById("info-content");
 let zekrInfo = document.getElementById("zekr-info-content");
 let progNum = document.getElementById("progress-num");
 let CounterBtn = document.getElementById("azkarBtn");
+let basmala = document.getElementById("basmala");
 let visitors;
 if (visitors === undefined) {
   visitors = 0;
@@ -80,7 +83,6 @@ const morningAzkarInfo = [
   "",
   "",
   "",
-  "",
   "من صلى على حين يصبح وحين يمسى ادركته شفاعتى يوم القيامة",
   "",
   "",
@@ -98,10 +100,45 @@ const morningAzkarCounter = [
   100, 100, 100,
 ];
 
+const morningAzkarBasmala = [
+  "",
+  "بِسْمِ اللهِ الرَّحْمنِ الرَّحِيم",
+  "بِسْمِ اللهِ الرَّحْمنِ الرَّحِيم",
+  "بِسْمِ اللهِ الرَّحْمنِ الرَّحِيم",
+  "بِسْمِ اللهِ الرَّحْمنِ الرَّحِيم",
+  "",
+  "",
+  "",
+  "",
+  "",
+  "",
+  "",
+  "",
+  "",
+  "",
+  "",
+  "",
+  "",
+  "",
+  "",
+  "",
+  "",
+  "",
+  "",
+  "",
+  "",
+  "",
+  "",
+  "",
+  "",
+]
+
+console.log(morningAzkarBasmala.length)
 // Current Index To Control / Switch To Next / Previous Zekr
 let currentMorningAzkarIndex = 0;
 let morningAzkarInfoIndex = 0;
 let morningAzkarCounterIndex = 0;
+let morningAzkarBasmalaIndex = 0;
 
 // function displays the Current Zekr By Index
 function displayMorningAzkar() {
@@ -114,6 +151,10 @@ function displayMorningAzkarInfo() {
 
 function displayMorningAzkarCounter() {
   CounterBtn.innerText = morningAzkarCounter[morningAzkarCounterIndex];
+}
+
+function displayMorningAzkarBasmala() {
+  basmala.innerText = morningAzkarBasmala[morningAzkarBasmalaIndex];
 }
 
 // Next Zekr Function
@@ -130,6 +171,10 @@ function nextMorningAzkar() {
   if (morningAzkarCounterIndex < morningAzkarCounter.length - 1) {
     morningAzkarCounterIndex++;
     displayMorningAzkarCounter();
+  }
+  if (morningAzkarBasmalaIndex < morningAzkarBasmala.length - 1) {
+    morningAzkarBasmalaIndex++;
+    displayMorningAzkarBasmala();
   }
 }
 
@@ -148,12 +193,17 @@ function prevMorningAzkar() {
     morningAzkarCounterIndex--;
     displayMorningAzkarCounter();
   }
+  if (morningAzkarBasmalaIndex > 0) {
+    morningAzkarBasmalaIndex--;
+    displayMorningAzkarBasmala();
+  }
 }
 
 // Call the Functions on click Event
 morningAzkarBtn.onclick = () => {
   displayMorningAzkar();
   displayMorningAzkarInfo();
+  displayMorningAzkarBasmala();
   nextBtn.addEventListener("click", nextMorningAzkar);
   prevBtn.addEventListener("click", prevMorningAzkar);
   progNum.innerText = `${currentMorningAzkarIndex} / 30`;
@@ -212,6 +262,7 @@ const EveningAzkar = [
 ];
 
 const EveningAzkarInfo = [
+  "",
   "من قالها حين يصبح أجير من الجن حتى يمسى ومن قالها حين يمسى أجير من الجن حتى يصبح",
   "من قرأ آيتين من آخر سورة البقرة في ليلة كفتاه",
   "من قالها حين يصبح وحين يمسى كفته من كل شىء (الإخلاص والمعوذتين)",
@@ -234,9 +285,7 @@ const EveningAzkarInfo = [
   "",
   "",
   "",
-  "",
   "من صلى على حين يصبح وحين يمسى ادركته شفاعتى يوم القيامة",
-  "",
   "",
   "",
   "",
@@ -251,9 +300,43 @@ const EveningAzkarCounter = [
   3, 3, 100, 1, 100,
 ];
 
+const EveningAzkarBasmala = [
+  "",
+  "بِسْمِ اللهِ الرَّحْمنِ الرَّحِيم",
+  "بِسْمِ اللهِ الرَّحْمنِ الرَّحِيم",
+  "بِسْمِ اللهِ الرَّحْمنِ الرَّحِيم",
+  "بِسْمِ اللهِ الرَّحْمنِ الرَّحِيم",
+  "بِسْمِ اللهِ الرَّحْمنِ الرَّحِيم",
+  "",
+  "",
+  "",
+  "",
+  "",
+  "",
+  "",
+  "",
+  "",
+  "",
+  "",
+  "",
+  "",
+  "",
+  "",
+  "",
+  "",
+  "",
+  "",
+  "",
+  "",
+  "",
+  "",
+  "",
+]
+
 let eveningAzkarIndex = 0;
 let eveningAzkarInfoIndex = 0;
 let eveningAzkarCounterIndex = 0;
+let eveningAzkarBasmalaIndex = 0;
 
 // function displays the Current Zekr By Inde
 function displayEveningAzkar() {
@@ -266,6 +349,9 @@ function displayEveningAzkarInfo() {
 
 function displayEveningAzkarCounter() {
   CounterBtn.innerText = EveningAzkarCounter[eveningAzkarCounterIndex];
+}
+function displayEveningAzkarBasmala() {
+  basmala.innerText = EveningAzkarBasmala[eveningAzkarBasmalaIndex];
 }
 
 // Next Zekr Function
@@ -282,6 +368,10 @@ function nextEveningAzkar() {
   if (eveningAzkarCounterIndex < EveningAzkarCounter.length - 1) {
     eveningAzkarCounterIndex++;
     displayEveningAzkarCounter();
+  }
+  if (eveningAzkarBasmalaIndex < EveningAzkarBasmala.length - 1) {
+    eveningAzkarBasmalaIndex++;
+    displayEveningAzkarBasmala();
   }
 }
 
@@ -300,11 +390,16 @@ function prevEveningAzkar() {
     eveningAzkarCounterIndex--;
     displayEveningAzkarCounter();
   }
+  if (eveningAzkarBasmalaIndex > 0) {
+    eveningAzkarBasmalaIndex--;
+    displayEveningAzkarBasmala();
+  }
 }
 
 // Call the Functions on click Event
 eveningAzkarBtn.onclick = () => {
   displayEveningAzkar();
+  displayEveningAzkarInfo();
   nextBtn.addEventListener("click", nextEveningAzkar);
   prevBtn.addEventListener("click", prevEveningAzkar);
   progNum.innerText = `${eveningAzkarIndex} / 30`;
@@ -350,9 +445,28 @@ const afterPrayAzkarInfo = [
 
 const afterPrayAzkarCounter = [1, 1, 1, 33, 33, 33, 1, 3, 3, 3, 1, 10, 1, 7, 1];
 
+const AftPrayAzkarBasmala = [
+  "",
+  "",
+  "",
+  "",
+  "",
+  "",
+  "",
+  "بِسْمِ اللهِ الرَّحْمنِ الرَّحِيم",
+  "بِسْمِ اللهِ الرَّحْمنِ الرَّحِيم",
+  "بِسْمِ اللهِ الرَّحْمنِ الرَّحِيم",
+  "بِسْمِ اللهِ الرَّحْمنِ الرَّحِيم",
+  "",
+  "",
+  "",
+  "",
+];
+
 let afterPrayAzkarIndex = 0;
 let afterPrayAzkarInfoIndex = 0;
 let afterPrayAzkarCounterIndex = 0;
+let AftPrayAzkarBasmalaIndex = 0;
 
 // function displays the Current Zekr By Inde
 function displayAfterPrayAzkar() {
@@ -365,6 +479,9 @@ function displayAfterPrayAzkarInfo() {
 
 function displayAfterPrayAzkarCounter() {
   CounterBtn.innerText = afterPrayAzkarCounter[afterPrayAzkarCounterIndex];
+}
+function displayAfterPrayAzkarBamala() {
+  basmala.innerText = AftPrayAzkarBasmala[AftPrayAzkarBasmalaIndex];
 }
 
 // Next Zekr Function
@@ -381,6 +498,10 @@ function nextAfterPrayAzkar() {
   if (afterPrayAzkarCounterIndex < afterPrayAzkarCounter.length - 1) {
     afterPrayAzkarCounterIndex++;
     displayAfterPrayAzkarCounter();
+  }
+  if (AftPrayAzkarBasmalaIndex < AftPrayAzkarBasmala.length - 1) {
+    AftPrayAzkarBasmalaIndex++;
+    displayAfterPrayAzkarBamala();
   }
 }
 
@@ -399,6 +520,10 @@ function prevAfterPrayAzkar() {
     afterPrayAzkarCounterIndex--;
     displayAfterPrayAzkarCounter();
   }
+  if (AftPrayAzkarBasmalaIndex > 0) {
+    AftPrayAzkarBasmalaIndex--;
+    displayAfterPrayAzkarBamala();
+  }
 }
 
 // Call the Functions on click Event
@@ -409,4 +534,201 @@ afterPrayAzkarBtn.onclick = () => {
   nextBtn.addEventListener("click", nextAfterPrayAzkar);
   prevBtn.addEventListener("click", prevAfterPrayAzkar);
   progNum.innerText = `${afterPrayAzkarIndex} / 14`;
+};
+
+// !Before Sleep Azkar
+const befSleepAzkar = [
+  "قُلْ هُوَ ٱللَّهُ أَحَدٌ، ٱللَّهُ ٱلصَّمَدُ، لَمْ يَلِدْ وَلَمْ يُولَدْ، وَلَمْ يَكُن لَّهُۥ كُفُوًا أَحَدٌۢ",
+  "قُلْ أَعُوذُ بِرَبِّ ٱلْفَلَقِ، مِن شَرِّ مَا خَلَقَ، وَمِن شَرِّ غَاسِقٍ إِذَا وَقَبَ، وَمِن شَرِّ ٱلنَّفَّٰثَٰتِ فِى ٱلْعُقَدِ، وَمِن شَرِّ حَاسِدٍ إِذَا حَسَدَ",
+  "قُلْ أَعُوذُ بِرَبِّ ٱلنَّاسِ، مَلِكِ ٱلنَّاسِ، إِلَٰهِ ٱلنَّاسِ، مِن شَرِّ ٱلْوَسْوَاسِ ٱلْخَنَّاسِ، ٱلَّذِى يُوَسْوِسُ فِى صُدُورِ ٱلنَّاسِ، مِنَ ٱلْجِنَّةِ وَٱلنَّاسِ",
+  "اللّهُ لاَ إِلَـهَ إِلاَّ هُوَ الْحَيُّ الْقَيُّومُ لاَ تَأْخُذُهُ سِنَةٌ وَلاَ نَوْمٌ لَّهُ مَا فِي السَّمَاوَاتِ وَمَا فِي الأَرْضِ مَن ذَا الَّذِي يَشْفَعُ عِنْدَهُ إِلاَّ بِإِذْنِهِ يَعْلَمُ مَا بَيْنَ أَيْدِيهِمْ وَمَا خَلْفَهُمْ وَلاَ يُحِيطُونَ بِشَيْءٍ مِّنْ عِلْمِهِ إِلاَّ بِمَا شَاء وَسِعَ كُرْسِيُّهُ السَّمَاوَاتِ وَالأَرْضَ وَلاَ يَؤُودُهُ حِفْظُهُمَا وَهُوَ الْعَلِيُّ الْعَظِيمُ",
+  "اللّهُـمَّ إِنَّـكَ خَلَـقْتَ نَفْسـي وَأَنْـتَ تَوَفّـاهـا لَكَ ممَـاتـها وَمَحْـياها ، إِنْ أَحْيَيْـتَها فاحْفَظْـها ، وَإِنْ أَمَتَّـها فَاغْفِـرْ لَـها . اللّهُـمَّ إِنَّـي أَسْـأَلُـكَ العـافِـيَة",
+  "بِاسْمِكَ رَبِّـي وَضَعْـتُ جَنْـبي ، وَبِكَ أَرْفَعُـه، فَإِن أَمْسَـكْتَ نَفْسـي فارْحَـمْها ، وَإِنْ أَرْسَلْتَـها فاحْفَظْـها بِمـا تَحْفَـظُ بِه عِبـادَكَ الصّـالِحـين",
+  "اللّهُـمَّ قِنـي عَذابَـكَ يَـوْمَ تَبْـعَثُ عِبـادَك",
+  "بِاسْـمِكَ اللّهُـمَّ أَحْـيا وَأَمـوتُ، الًّلهُمَّ بِكَ أَمسَينَا وَبِكَ أَصبَحنَا وَبٍكَ نَحْيَا وَبِكَ نَمُوت وَإِليَكَ النُّشَورْ ",
+  "اللّهُـمَّ عالِـمَ الغَـيبِ وَالشّـهادةِ فاطِـرَ السّماواتِ وَالأرْضِ رَبَّ كُـلِّ شَـيءٍ ، أَعـوذُ بِكَ مِن شَـرِّ نَفْسـي، وَمِن شَـرِّ الشَّيْـطانِ وَشِـرْكِه، وَأَنْ أَقْتَـرِفَ عَلـى نَفْسـي سوءاً أَوْ أَجُـرَّهُ إِلـى مُسْـلِم",
+  "الـحَمْدُ للهِ الَّذي أَطْـعَمَنا وَسَقـانا، وَكَفـانا، وَآوانا، فَكَـمْ مِمَّـنْ لا كـافِيَ لَـهُ وَلا مُـؤْوي",
+  "سُبْحَانَ اللَّهِ",
+  "الْحَمْدُ لِلَّهِ",
+  "اللَّهُ أَكْبَرُ",
+  "آمَنَ الرَّسُولُ بِمَا أُنْزِلَ إِلَيْهِ مِنْ رَبِّهِ وَالْمُؤْمِنُونَ ۚ كُلٌّ آمَنَ بِاللَّهِ وَمَلَائِكَتِهِ وَكُتُبِهِ وَرُسُلِهِ لَا نُفَرِّقُ بَيْنَ أَحَدٍ مِنْ رُسُلِهِ ۚ وَقَالُوا سَمِعْنَا وَأَطَعْنَا ۖ غُفْرَانَكَ رَبَّنَا وَإِلَيْكَ الْمَصِيرُ. لَا يُكَلِّفُ اللَّهُ نَفْسًا إِلَّا وُسْعَهَا لَهَا مَا كَسَبَتْ وَعَلَيْهَا مَا اكْتَسَبَتْ رَبَّنَا لَا تُؤَاخِذْنَا إِنْ نَسِينَا أَوْ أَخْطَأْنَا رَبَّنَا وَلَا تَحْمِلْ عَلَيْنَا إِصْرًا كَمَا حَمَلْتَهُ عَلَى الَّذِينَ مِنْ قَبْلِنَا رَبَّنَا وَلَا تُحَمِّلْنَا مَا لَا طَاقَةَ لَنَا بِهِ وَاعْفُ عَنَّا وَاغْفِرْ لَنَا وَارْحَمْنَا أَنْتَ مَوْلَانَا فَانْصُرْنَا عَلَى الْقَوْمِ الْكَافِرِينَ",
+];
+
+const befSleepAzkarInfo = [
+  "",
+  "",
+  "",
+  "أجير من الجن حتى يصبح",
+  "",
+  "",
+  "",
+  "",
+  "",
+  "",
+  "",
+  "",
+  "",
+  "من قرأ آيتين من آخر سورة البقرة في ليلة كفتاه",
+];
+
+const befSleepAzkarCounter = [
+  1, 1, 1, 1, 1,1,3,1,1,1,33,33,33,1
+];
+const BefSleepAzkarBasmala = [
+  "بِسْمِ اللهِ الرَّحْمنِ الرَّحِيم",
+  "بِسْمِ اللهِ الرَّحْمنِ الرَّحِيم",
+  "بِسْمِ اللهِ الرَّحْمنِ الرَّحِيم",
+  "بِسْمِ اللهِ الرَّحْمنِ الرَّحِيم",
+  "",
+  "",
+  "",
+  "",
+  "",
+  "",
+  "",
+  "",
+  "",
+  "بِسْمِ اللهِ الرَّحْمنِ الرَّحِيم",
+]
+
+let befSleepAzkarIndex = 0;
+let befSleepAzkarInfoIndex = 0;
+let befSleepAzkarCounterIndex = 0;
+let BefSleepAzkarBasmalaIndex = 0;
+
+// function displays the Current Zekr By Inde
+function displaybefSleepAzkar() {
+  appearContent.innerText = befSleepAzkar[befSleepAzkarIndex];
+}
+
+function displaybefSleepAzkarInfo() {
+  zekrInfo.innerText = befSleepAzkarInfo[befSleepAzkarInfoIndex];
+}
+
+function displaybefSleepAzkarCounter() {
+  CounterBtn.innerText = befSleepAzkarCounter[befSleepAzkarCounterIndex];
+}
+function displaybefSleepAzkarBasmala() {
+  basmala.innerText = BefSleepAzkarBasmala[BefSleepAzkarBasmalaIndex];
+}
+
+// Next Zekr Function
+function nextbefSleepAzkar() {
+  if (befSleepAzkarIndex < befSleepAzkar.length - 1) {
+    befSleepAzkarIndex++;
+    displaybefSleepAzkar();
+    progNum.innerText = `${befSleepAzkarIndex + 1} / 14`;
+  }
+  if (befSleepAzkarInfoIndex < befSleepAzkarInfo.length - 1) {
+    befSleepAzkarInfoIndex++;
+    displaybefSleepAzkarInfo();
+  }
+  if (befSleepAzkarCounterIndex < befSleepAzkarCounter.length - 1) {
+    befSleepAzkarCounterIndex++;
+    displaybefSleepAzkarCounter();
+  }
+  if (BefSleepAzkarBasmalaIndex < BefSleepAzkarBasmala.length - 1) {
+    BefSleepAzkarBasmalaIndex++;
+    displaybefSleepAzkarBasmala();
+  }
+}
+
+// Prev Zekr Function
+function prevbefSleepAzkar() {
+  if (befSleepAzkarIndex > 0) {
+    befSleepAzkarIndex--;
+    displaybefSleepAzkar();
+    progNum.innerText = `${befSleepAzkarIndex + 1} / 14`;
+  }
+  if (befSleepAzkarInfoIndex > 0) {
+    befSleepAzkarInfoIndex--;
+    displaybefSleepAzkarInfo();
+  }
+  if (befSleepAzkarCounterIndex > 0) {
+    befSleepAzkarCounterIndex--;
+    displaybefSleepAzkarCounter();
+  }
+  if (BefSleepAzkarBasmalaIndex > 0) {
+    BefSleepAzkarBasmalaIndex--;
+    displaybefSleepAzkarBasmala();
+  }
+}
+
+// Call the Functions on click Event
+befSleepAzkarBtn.onclick = () => {
+  displaybefSleepAzkar();
+  displaybefSleepAzkarInfo();
+  displaybefSleepAzkarCounter();
+  displaybefSleepAzkarBasmala();
+  nextBtn.addEventListener("click", nextbefSleepAzkar);
+  prevBtn.addEventListener("click", prevbefSleepAzkar);
+  progNum.innerText = `${befSleepAzkarIndex + 1} / 14`;
+};
+// !After Sleep Azkar
+const aftSleepAzkar = [
+  " الحَمْدُ لله الذِي أحْيَانا بَعْدَ مَا أمَاتَنَا وإلَيْهِ النَشُور",
+  "الحَمْدُ لله الذِي عَافَانِي في جَسَدِي ورَدَّ عَلَيَّ رُوحِي، وأَذِنَ لي بِذِكْرهِ",
+  "لا إلَهَ إلاَّ الله وحْدَهُ لا شَرِيكَ لَهُ، لَهُ المُلْكُ ولَهُ الحَمْدُ وهُوَ على كلِّ شيءٍ قَدير",
+  "سُبْحانَ الله",
+  "الحَمْدُ لله",
+  "لا إله إلا الله",
+  "الله أكبر",
+  "لا حَولَ ولا قُوةَ إلا بالله العلي العظيم",
+  "اللَّهُمَّ اغْفِرْ لي",
+];
+
+
+const aftSleepAzkarCounter = [
+  1, 1, 1, 33, 33, 33, 33, 1, 1,
+];
+
+let aftSleepAzkarIndex = 0;
+let aftSleepAzkarInfoIndex = 0;
+let aftSleepAzkarCounterIndex = 0;
+
+// function displays the Current Zekr By Inde
+function displayaftSleepAzkar() {
+  appearContent.innerText = aftSleepAzkar[aftSleepAzkarIndex];
+}
+
+function displayaftSleepAzkarCounter() {
+  CounterBtn.innerText = aftSleepAzkarCounter[aftSleepAzkarCounterIndex];
+}
+
+
+// Next Zekr Function
+function nextaftSleepAzkar() {
+  if (aftSleepAzkarIndex < aftSleepAzkar.length - 1) {
+    aftSleepAzkarIndex++;
+    displayaftSleepAzkar();
+    progNum.innerText = `${aftSleepAzkarIndex + 1} / 9`;
+  }
+  if (aftSleepAzkarCounterIndex < aftSleepAzkarCounter.length - 1) {
+    aftSleepAzkarCounterIndex++;
+    displayaftSleepAzkarCounter();
+  }
+
+}
+
+// Prev Zekr Function
+function prevaftSleepAzkar() {
+  if (aftSleepAzkarIndex > 0) {
+    aftSleepAzkarIndex--;
+    displayaftSleepAzkar();
+    progNum.innerText = `${aftSleepAzkarIndex + 1} / 9`;
+  }
+  if (aftSleepAzkarCounterIndex > 0) {
+    aftSleepAzkarCounterIndex--;
+    displayaftSleepAzkarCounter();
+  }
+
+}
+
+// Call the Functions on click Event
+aftSleepBtn.onclick = () => {
+  displayaftSleepAzkar();
+  displayaftSleepAzkarCounter();
+  nextBtn.addEventListener("click", nextaftSleepAzkar);
+  prevBtn.addEventListener("click", prevaftSleepAzkar);
+  progNum.innerText = `${aftSleepAzkarIndex + 1} / 9`;
 };
