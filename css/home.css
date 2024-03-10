@@ -30,12 +30,12 @@ section {
   flex-wrap: wrap;
 }
 .img1 {
-  height: 300px;
+  height: 250px;
   display: inline;
   border: 2px solid white;
 }
 .img2 {
-  height: 300px;
+  height: 250px;
   display: inline;
   border: 2px solid white;
 }

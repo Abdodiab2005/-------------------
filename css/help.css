@@ -4,7 +4,7 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 20px;
+  padding: 50px;
   flex-direction: column;
   background-color: var(--c2);
   color: var(--c1);
@@ -26,4 +26,9 @@
   scale: 1.1;
   background-color: var(--c1);
   color: green;
+}
+@media (max-width: 888px) {
+  .container{
+    font-size: 0.75rem;
+  }
 }
