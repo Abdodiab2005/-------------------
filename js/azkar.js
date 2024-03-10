@@ -131,9 +131,9 @@ const morningAzkarBasmala = [
   "",
   "",
   "",
-]
+];
 
-console.log(morningAzkarBasmala.length)
+console.log(morningAzkarBasmala.length);
 // Current Index To Control / Switch To Next / Previous Zekr
 let currentMorningAzkarIndex = 0;
 let morningAzkarInfoIndex = 0;
@@ -331,7 +331,7 @@ const EveningAzkarBasmala = [
   "",
   "",
   "",
-]
+];
 
 let eveningAzkarIndex = 0;
 let eveningAzkarInfoIndex = 0;
@@ -552,6 +552,7 @@ const befSleepAzkar = [
   "الْحَمْدُ لِلَّهِ",
   "اللَّهُ أَكْبَرُ",
   "آمَنَ الرَّسُولُ بِمَا أُنْزِلَ إِلَيْهِ مِنْ رَبِّهِ وَالْمُؤْمِنُونَ ۚ كُلٌّ آمَنَ بِاللَّهِ وَمَلَائِكَتِهِ وَكُتُبِهِ وَرُسُلِهِ لَا نُفَرِّقُ بَيْنَ أَحَدٍ مِنْ رُسُلِهِ ۚ وَقَالُوا سَمِعْنَا وَأَطَعْنَا ۖ غُفْرَانَكَ رَبَّنَا وَإِلَيْكَ الْمَصِيرُ. لَا يُكَلِّفُ اللَّهُ نَفْسًا إِلَّا وُسْعَهَا لَهَا مَا كَسَبَتْ وَعَلَيْهَا مَا اكْتَسَبَتْ رَبَّنَا لَا تُؤَاخِذْنَا إِنْ نَسِينَا أَوْ أَخْطَأْنَا رَبَّنَا وَلَا تَحْمِلْ عَلَيْنَا إِصْرًا كَمَا حَمَلْتَهُ عَلَى الَّذِينَ مِنْ قَبْلِنَا رَبَّنَا وَلَا تُحَمِّلْنَا مَا لَا طَاقَةَ لَنَا بِهِ وَاعْفُ عَنَّا وَاغْفِرْ لَنَا وَارْحَمْنَا أَنْتَ مَوْلَانَا فَانْصُرْنَا عَلَى الْقَوْمِ الْكَافِرِينَ",
+  "قراءة سورة الملك",
 ];
 
 const befSleepAzkarInfo = [
@@ -569,11 +570,10 @@ const befSleepAzkarInfo = [
   "",
   "",
   "من قرأ آيتين من آخر سورة البقرة في ليلة كفتاه",
+  "هي المنجية من عذاب القبر",
 ];
 
-const befSleepAzkarCounter = [
-  1, 1, 1, 1, 1,1,3,1,1,1,33,33,33,1
-];
+const befSleepAzkarCounter = [1, 1, 1, 1, 1, 1, 3, 1, 1, 1, 33, 33, 33, 1, 1];
 const BefSleepAzkarBasmala = [
   "بِسْمِ اللهِ الرَّحْمنِ الرَّحِيم",
   "بِسْمِ اللهِ الرَّحْمنِ الرَّحِيم",
@@ -589,7 +589,8 @@ const BefSleepAzkarBasmala = [
   "",
   "",
   "بِسْمِ اللهِ الرَّحْمنِ الرَّحِيم",
-]
+  "",
+];
 
 let befSleepAzkarIndex = 0;
 let befSleepAzkarInfoIndex = 0;
@@ -617,7 +618,7 @@ function nextbefSleepAzkar() {
   if (befSleepAzkarIndex < befSleepAzkar.length - 1) {
     befSleepAzkarIndex++;
     displaybefSleepAzkar();
-    progNum.innerText = `${befSleepAzkarIndex + 1} / 14`;
+    progNum.innerText = `${befSleepAzkarIndex + 1} / 15`;
   }
   if (befSleepAzkarInfoIndex < befSleepAzkarInfo.length - 1) {
     befSleepAzkarInfoIndex++;
@@ -631,6 +632,9 @@ function nextbefSleepAzkar() {
     BefSleepAzkarBasmalaIndex++;
     displaybefSleepAzkarBasmala();
   }
+  if (befSleepAzkarIndex === 14) {
+    suratElmulkPopup();
+  }
 }
 
 // Prev Zekr Function
@@ -638,7 +642,7 @@ function prevbefSleepAzkar() {
   if (befSleepAzkarIndex > 0) {
     befSleepAzkarIndex--;
     displaybefSleepAzkar();
-    progNum.innerText = `${befSleepAzkarIndex + 1} / 14`;
+    progNum.innerText = `${befSleepAzkarIndex + 1} / 15`;
   }
   if (befSleepAzkarInfoIndex > 0) {
     befSleepAzkarInfoIndex--;
@@ -652,6 +656,9 @@ function prevbefSleepAzkar() {
     BefSleepAzkarBasmalaIndex--;
     displaybefSleepAzkarBasmala();
   }
+  if (befSleepAzkarIndex !== 14) {
+    suratElmulkPopup = null;
+  }
 }
 
 // Call the Functions on click Event
@@ -662,8 +669,18 @@ befSleepAzkarBtn.onclick = () => {
   displaybefSleepAzkarBasmala();
   nextBtn.addEventListener("click", nextbefSleepAzkar);
   prevBtn.addEventListener("click", prevbefSleepAzkar);
-  progNum.innerText = `${befSleepAzkarIndex + 1} / 14`;
+  progNum.innerText = `${befSleepAzkarIndex + 1} / 15`;
 };
+
+function suratElmulkPopup() {
+  CounterBtn.onclick = () => {
+    if (CounterBtn.innerText > 0) {
+      CounterBtn.innerText--;
+      suratElmulk();
+    }
+  };
+}
+
 // !After Sleep Azkar
 const aftSleepAzkar = [
   " الحَمْدُ لله الذِي أحْيَانا بَعْدَ مَا أمَاتَنَا وإلَيْهِ النَشُور",
@@ -677,10 +694,7 @@ const aftSleepAzkar = [
   "اللَّهُمَّ اغْفِرْ لي",
 ];
 
-
-const aftSleepAzkarCounter = [
-  1, 1, 1, 33, 33, 33, 33, 1, 1,
-];
+const aftSleepAzkarCounter = [1, 1, 1, 33, 33, 33, 33, 1, 1];
 
 let aftSleepAzkarIndex = 0;
 let aftSleepAzkarInfoIndex = 0;
@@ -695,7 +709,6 @@ function displayaftSleepAzkarCounter() {
   CounterBtn.innerText = aftSleepAzkarCounter[aftSleepAzkarCounterIndex];
 }
 
-
 // Next Zekr Function
 function nextaftSleepAzkar() {
   if (aftSleepAzkarIndex < aftSleepAzkar.length - 1) {
@@ -707,7 +720,6 @@ function nextaftSleepAzkar() {
     aftSleepAzkarCounterIndex++;
     displayaftSleepAzkarCounter();
   }
-
 }
 
 // Prev Zekr Function
@@ -721,7 +733,6 @@ function prevaftSleepAzkar() {
     aftSleepAzkarCounterIndex--;
     displayaftSleepAzkarCounter();
   }
-
 }
 
 // Call the Functions on click Event
@@ -732,3 +743,122 @@ aftSleepBtn.onclick = () => {
   prevBtn.addEventListener("click", prevaftSleepAzkar);
   progNum.innerText = `${aftSleepAzkarIndex + 1} / 9`;
 };
+
+// popups
+function suratElmulk() {
+  Swal.fire({
+    title: "<strong>سورة الملك</strong>",
+    html: `
+    <p>
+    تَبَارَكَ الَّذِي بِيَدِهِ الْمُلْكُ وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ (1)
+
+    الَّذِي خَلَقَ الْمَوْتَ وَالْحَيَاةَ لِيَبْلُوَكُمْ أَيُّكُمْ أَحْسَنُ عَمَلا وَهُوَ الْعَزِيزُ الْغَفُورُ (2)
+    
+    الَّذِي خَلَقَ سَبْعَ سَمَاوَاتٍ طِبَاقًا مَّا تَرَى فِي خَلْقِ الرَّحْمَنِ مِن تَفَاوُتٍ فَارْجِعِ الْبَصَرَ هَلْ تَرَى مِن فُطُورٍ (3)
+    
+    ثُمَّ ارْجِعِ الْبَصَرَ كَرَّتَيْنِ يَنقَلِبْ إِلَيْكَ الْبَصَرُ خَاسِئاً وَهُوَ حَسِيرٌ (4)
+    
+    وَلَقَدْ زَيَّنَّا السَّمَاء الدُّنْيَا بِمَصَابِيحَ وَجَعَلْنَاهَا رُجُومًا لِّلشَّيَاطِينِ وَأَعْتَدْنَا لَهُمْ عَذَابَ السَّعِيرِ (5)
+    
+    وَلِلَّذِينَ كَفَرُوا بِرَبِّهِمْ عَذَابُ جَهَنَّمَ وَبِئْسَ الْمَصِيرُ (6)
+    
+    إِذَا أُلْقُوا فِيهَا سَمِعُوا لَهَا شَهِيقًا وَهِيَ تَفُورُ (7)
+    
+    تَكَادُ تَمَيَّزُ مِنَ الْغَيْظِ كُلَّمَا أُلْقِيَ فِيهَا فَوْجٌ سَأَلَهُمْ خَزَنَتُهَا أَلَمْ يَأْتِكُمْ نَذِيرٌ (8)
+    
+    قَالُوا بَلَى قَدْ جَاءَنَا نَذِيرٌ فَكَذَّبْنَا وَقُلْنَا مَا نَزَّلَ اللَّهُ مِن شَيْءٍ إِنْ أَنتُمْ إِلاَّ فِي ضَلالٍ كَبِيرٍ (9)
+    
+    وَقَالُوا لَوْ كُنَّا نَسْمَعُ أَوْ نَعْقِلُ مَا كُنَّا فِي أَصْحَابِ السَّعِيرِ (10)
+    </p>
+  `,
+    showCloseButton: true,
+    focusConfirm: false,
+    confirmButtonText: `
+    <i class="fa fa-next"></i> التالي!
+  `,
+    confirmButtonAriaLabel: "Thumbs up, great!",
+    cancelButtonText: `
+    <i class="fa fa-thumbs-down"></i> إغلاق
+  `,
+    cancelButtonAriaLabel: "Thumbs down",
+  }).then((result) => {
+    if (result.isConfirmed) {
+      next1();
+    }
+  });
+}
+function next1() {
+  Swal.fire({
+    title: "<strong>سورة الملك</strong>",
+    html: `
+  <p>
+  فَاعْتَرَفُوا بِذَنبِهِمْ فَسُحْقًا لِّأَصْحَابِ السَّعِيرِ (11)
+
+  إِنَّ الَّذِينَ يَخْشَوْنَ رَبَّهُم بِالْغَيْبِ لَهُم مَّغْفِرَةٌ وَأَجْرٌ كَبِيرٌ (12)
+  
+  وَأَسِرُّوا قَوْلَكُمْ أَوِ اجْهَرُوا بِهِ إِنَّهُ عَلِيمٌ بِذَاتِ الصُّدُورِ (13)
+  
+  أَلا يَعْلَمُ مَنْ خَلَقَ وَهُوَ اللَّطِيفُ الْخَبِيرُ (14)
+  
+  هُوَ الَّذِي جَعَلَ لَكُمُ الأَرْضَ ذَلُولا فَامْشُوا فِي مَنَاكِبِهَا وَكُلُوا مِن رِّزْقِهِ وَإِلَيْهِ النُّشُورُ (15)
+  
+  أَأَمِنتُم مَّن فِي السَّمَاء أَن يَخْسِفَ بِكُمُ الأَرْضَ فَإِذَا هِيَ تَمُورُ (16)
+  
+  أَمْ أَمِنتُم مَّن فِي السَّمَاء أَن يُرْسِلَ عَلَيْكُمْ حَاصِبًا فَسَتَعْلَمُونَ كَيْفَ نَذِيرِ (17)
+  
+  وَلَقَدْ كَذَّبَ الَّذِينَ مِن قَبْلِهِمْ فَكَيْفَ كَانَ نَكِيرِ (18)
+  
+  أَوَلَمْ يَرَوْا إِلَى الطَّيْرِ فَوْقَهُمْ صَافَّاتٍ وَيَقْبِضْنَ مَا يُمْسِكُهُنَّ إِلاَّ الرَّحْمَنُ إِنَّهُ بِكُلِّ شَيْءٍ بَصِيرٌ (19)
+  
+  أَمَّنْ هَذَا الَّذِي هُوَ جُندٌ لَّكُمْ يَنصُرُكُم مِّن دُونِ الرَّحْمَنِ إِنِ الْكَافِرُونَ إِلاَّ فِي غُرُورٍ (20)
+  </p>
+  `,
+    showCloseButton: true,
+    focusConfirm: false,
+    confirmButtonText: `
+    <i class="fa fa-next"></i> التالي!
+  `,
+    confirmButtonAriaLabel: "Thumbs up, great!",
+    cancelButtonText: `
+    <i class="fa fa-thumbs-down"></i> إغلاق
+  `,
+    cancelButtonAriaLabel: "Thumbs down",
+  }).then((result) => {
+    if (result.isConfirmed) {
+      next2();
+    }
+  });
+}
+function next2() {
+  Swal.fire({
+    title: "<strong>سورة الملك</strong>",
+    html: `
+  <p>
+  أَمَّنْ هَذَا الَّذِي يَرْزُقُكُمْ إِنْ أَمْسَكَ رِزْقَهُ بَل لَّجُّوا فِي عُتُوٍّ وَنُفُورٍ (21)
+
+  أَفَمَن يَمْشِي مُكِبًّا عَلَى وَجْهِهِ أَهْدَى أَمَّن يَمْشِي سَوِيًّا عَلَى صِرَاطٍ مُّسْتَقِيمٍ (22)
+  
+  قُلْ هُوَ الَّذِي أَنشَأَكُمْ وَجَعَلَ لَكُمُ السَّمْعَ وَالأَبْصَارَ وَالأَفْئِدَةَ قَلِيلا مَّا تَشْكُرُونَ (23)
+  
+  قُلْ هُوَ الَّذِي ذَرَأَكُمْ فِي الأَرْضِ وَإِلَيْهِ تُحْشَرُونَ (24)
+  
+  وَيَقُولُونَ مَتَى هَذَا الْوَعْدُ إِن كُنتُمْ صَادِقِينَ (25)
+  
+  قُلْ إِنَّمَا الْعِلْمُ عِندَ اللَّهِ وَإِنَّمَا أَنَا نَذِيرٌ مُّبِينٌ (26)
+  
+  فَلَمَّا رَأَوْهُ زُلْفَةً سِيئَتْ وُجُوهُ الَّذِينَ كَفَرُوا وَقِيلَ هَذَا الَّذِي كُنتُم بِهِ تَدَّعُونَ (27)
+  
+  قُلْ أَرَأَيْتُمْ إِنْ أَهْلَكَنِيَ اللَّهُ وَمَن مَّعِيَ أَوْ رَحِمَنَا فَمَن يُجِيرُ الْكَافِرِينَ مِنْ عَذَابٍ أَلِيمٍ (28)
+  
+  قُلْ هُوَ الرَّحْمَنُ آمَنَّا بِهِ وَعَلَيْهِ تَوَكَّلْنَا فَسَتَعْلَمُونَ مَنْ هُوَ فِي ضَلالٍ مُّبِينٍ (29)
+  
+  قُلْ أَرَأَيْتُمْ إِنْ أَصْبَحَ مَاؤُكُمْ غَوْرًا فَمَن يَأْتِيكُم بِمَاء مَّعِينٍ (30)
+  </p>
+  `,
+    focusConfirm: false,
+    confirmButtonText: `
+    <i class="fa fa-next"></i> أحسنت لنكمل!
+  `,
+    confirmButtonAriaLabel: "Thumbs up, great!",
+  });
+}
