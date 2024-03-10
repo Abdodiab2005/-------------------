@@ -862,13 +862,13 @@ function next2() {
   قُلْ أَرَأَيْتُمْ إِنْ أَصْبَحَ مَاؤُكُمْ غَوْرًا فَمَن يَأْتِيكُم بِمَاء مَّعِينٍ (30)
   </p>
   <br>
-  <br>
   <span class="surah-end"> صدق الله العظيم </span>
   `,
     focusConfirm: false,
     confirmButtonText: `
-    <i class="fa fa-next"></i> أحسنت لنكمل!
+    <i class="fa fa-next"></i> لقد انتهيت، عمل جيد!
   `,
+    confirmButtonColor: "green",
     confirmButtonAriaLabel: "Thumbs up, great!",
   });
 }

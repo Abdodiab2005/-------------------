@@ -55,9 +55,11 @@ section {
   border: none;
   outline: none;
   transition: 0.3s;
+  flex: 1 0 30%;
+  margin: 0 21px;
 }
 .selectBtn:hover {
-  scale: 1.15;
+  scale: 1.05;
   background-color: var(--c1);
   color: var(--c2);
 }
@@ -253,12 +255,14 @@ section {
 
 @media (max-width: 800px) {
   .buttonsContainer {
-    height: 450px;
-    margin-bottom: 20px;
+    height: 300px;
+    margin-bottom: 10px;
   }
   .selectBtn {
-    width: 90%;
-    height: 50px;
+    font-size: 0.75rem;
+    width: 80%;
+    height: 35px;
+    flex: 0 0 90%;
   }
   #text-content,
   #zekr-info-content {
@@ -268,7 +272,7 @@ section {
     max-width: 80%;
     right: 10%;
     font-size: 0.65rem;
-    top: 70%;
+    top: 74%;
     color: var(--c4);
   }
   #progress-num {
@@ -320,5 +324,21 @@ section {
     width: 150px;
     height: 50px;
     font-size: 0.85rem;
+  }
+  .movementBtnsContainer{
+    height: 45px;
+  }
+  .movementBtns{
+    width: 100%;
+
+  }
+  #display-items{
+    font-size: 0.7rem;
+  }
+  #next-Btn,
+  #previous-Btn{
+    font-size: 1rem;
+    width: 60px;
+    padding-top: 3px;
   }
 }
