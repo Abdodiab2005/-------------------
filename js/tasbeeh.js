@@ -1,16 +1,8 @@
-if (localStorage.getItem("UNV")) {
-  document.querySelector("aside").style.visibility = "visible";
-}
-
-if (!localStorage.getItem("UNV")) {
-  location.replace("login.html");
-}
-
 // logout button
-document.getElementById("logout-icon").addEventListener("click", () => {
-  localStorage.clear();
-  location.replace("../html/home.html");
-});
+// document.getElementById("logout-icon").addEventListener("click", () => {
+//   localStorage.clear();
+//   location.replace("../html/home.html");
+// });
 
 // declare the selection btns
 let tasBtn1 = document.getElementById("tasBtn1");
