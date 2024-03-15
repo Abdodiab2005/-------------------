@@ -66,7 +66,7 @@ section {
 
 /* Movement Buttons (Next / Previous) */
 .movementBtns {
-  padding: 35px;
+  padding: 15px;
   background-color: var(--c3);
   width: 90%;
   display: flex;
@@ -207,7 +207,7 @@ section {
   font-size: 1rem;
 }
 .azkarBtn:hover {
-  scale: 1.1;
+  scale: 1.07;
 }
 
 /** Counter */
@@ -299,12 +299,12 @@ section {
     border: none;
     background-color: var(--c3);
     cursor: pointer;
-    transition: 0.3s;
+    transition: 0.2s;
     color: var(--c1);
     font-size: 1rem;
   }
   .azkarBtn:hover {
-    scale: 1.1;
+    scale: 1.065;
   }
   .nestedContainer {
     display: flex;
@@ -327,10 +327,6 @@ section {
   }
   .movementBtnsContainer{
     height: 45px;
-  }
-  .movementBtns{
-    width: 100%;
-
   }
   #display-items{
     font-size: 0.7rem;

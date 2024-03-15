@@ -17,15 +17,93 @@ let zekrInfo = document.getElementById("zekr-info-content");
 let progNum = document.getElementById("progress-num");
 let CounterBtn = document.getElementById("azkarBtn");
 let basmala = document.getElementById("basmala");
-let visitors;
-if (visitors === undefined) {
-  visitors = 0;
+
+function compeletedMorningAzkar() {
+  const Toast = Swal.mixin({
+    toast: true,
+    position: "top-end",
+    showConfirmButton: false,
+    timer: 3000,
+    timerProgressBar: true,
+    didOpen: (toast) => {
+      toast.onmouseenter = Swal.stopTimer;
+      toast.onmouseleave = Swal.resumeTimer;
+    },
+  });
+  Toast.fire({
+    icon: "success",
+    title: "تهانينا لقد أنهيت بالفعل أذكار الصباح، عمل جيد",
+  });
+}
+function compeletedEveningAzkar() {
+  const Toast = Swal.mixin({
+    toast: true,
+    position: "top-end",
+    showConfirmButton: false,
+    timer: 3000,
+    timerProgressBar: true,
+    didOpen: (toast) => {
+      toast.onmouseenter = Swal.stopTimer;
+      toast.onmouseleave = Swal.resumeTimer;
+    },
+  });
+  Toast.fire({
+    icon: "success",
+    title: "تهانينا لقد أنهيت بالفعل أذكار المساء، عمل جيد",
+  });
+}
+function compeletedAftPrayAzkar() {
+  const Toast = Swal.mixin({
+    toast: true,
+    position: "top-end",
+    showConfirmButton: false,
+    timer: 3000,
+    timerProgressBar: true,
+    didOpen: (toast) => {
+      toast.onmouseenter = Swal.stopTimer;
+      toast.onmouseleave = Swal.resumeTimer;
+    },
+  });
+  Toast.fire({
+    icon: "success",
+    title: "تهانينا لقد أنهيت بالفعل أذكار مابعد الصلاه، عمل جيد",
+  });
+}
+function compeletedBefSleepAzkar() {
+  const Toast = Swal.mixin({
+    toast: true,
+    position: "top-end",
+    showConfirmButton: false,
+    timer: 3000,
+    timerProgressBar: true,
+    didOpen: (toast) => {
+      toast.onmouseenter = Swal.stopTimer;
+      toast.onmouseleave = Swal.resumeTimer;
+    },
+  });
+  Toast.fire({
+    icon: "success",
+    title: "تهانينا لقد أنهيت بالفعل أذكار ماقبل النوم، عمل جيد",
+  });
+}
+function compeletedAftSleepAzkar() {
+  const Toast = Swal.mixin({
+    toast: true,
+    position: "top-end",
+    showConfirmButton: false,
+    timer: 3000,
+    timerProgressBar: true,
+    didOpen: (toast) => {
+      toast.onmouseenter = Swal.stopTimer;
+      toast.onmouseleave = Swal.resumeTimer;
+    },
+  });
+  Toast.fire({
+    icon: "success",
+    title: "تهانينا لقد أنهيت بالفعل أذكار بعد الاستيقاظ، عمل جيد",
+  });
 }
 
-window.onload = () => {
-  visitors++;
-  console.log(visitors);
-};
 // !Morning Azkar
 const morningAzkar = [
   "من فضائل الذكر عموما وأذكار الصباح والمساء خصوصا ما جاء في الصحيحين وغيرهما أن رسول الله صلى الله عليه وسلم قال: من قال لا إله إلا الله وحده لا شريك له له الملك وله الحمد وهو على كل شيء قدير في يوم مائة مرة كانت له عدل عشر رقاب، وكتبت له مائة حسنة، ومحيت عنه مائة سيئة، وكانت له حرزا من الشيطان يومه ذلك حتى يمسي، ولم يأت أحد بأفضل مما جاء به إلا أحد عمل أكثر من ذلك.",
@@ -96,8 +174,37 @@ const morningAzkarInfo = [
 ];
 
 const morningAzkarCounter = [
-  0, 1, 3, 3, 3, 1, 3, 4, 1, 7, 3, 1, 1, 3, 3, 3, 1, 3, 1, 1, 3, 10, 3, 3, 3, 3,
-  3, 3, 100, 100, 3,
+  "",
+  1,
+  3,
+  3,
+  3,
+  1,
+  3,
+  4,
+  1,
+  7,
+  3,
+  1,
+  1,
+  3,
+  3,
+  3,
+  1,
+  3,
+  1,
+  1,
+  3,
+  10,
+  3,
+  3,
+  3,
+  3,
+  3,
+  3,
+  100,
+  100,
+  3,
 ];
 
 const morningAzkarBasmala = [
@@ -133,7 +240,6 @@ const morningAzkarBasmala = [
   "",
 ];
 
-console.log(morningAzkarBasmala.length);
 // Current Index To Control / Switch To Next / Previous Zekr
 let currentMorningAzkarIndex = 0;
 let morningAzkarInfoIndex = 0;
@@ -199,6 +305,13 @@ function prevMorningAzkar() {
   }
 }
 
+// Counter Button
+CounterBtn.onclick = () => {
+  // if (morningAzkarCounter[30] === 0) {
+  //   compeletedMorningAzkar();
+  // } else  else   else
+};
+
 // Call the Functions on click Event
 morningAzkarBtn.onclick = () => {
   displayMorningAzkar();
@@ -207,14 +320,16 @@ morningAzkarBtn.onclick = () => {
   nextBtn.addEventListener("click", nextMorningAzkar);
   prevBtn.addEventListener("click", prevMorningAzkar);
   progNum.innerText = `${currentMorningAzkarIndex} / 30`;
-  // morningAzkarBtn1.classList.add("act");
-};
 
-// Counter Button
-CounterBtn.onclick = () => {
-  if (CounterBtn.innerText > 0) {
-    CounterBtn.innerText--;
-  }
+  CounterBtn.onclick = () => {
+    if (CounterBtn.innerText > 0) {
+      morningAzkarCounter[morningAzkarCounterIndex]--;
+      CounterBtn.innerText = morningAzkarCounter[morningAzkarCounterIndex];
+    }
+    if (morningAzkarCounter[30] === 0) {
+      compeletedMorningAzkar();
+    }
+  };
 };
 
 // ? progress bar
@@ -296,8 +411,37 @@ const EveningAzkarInfo = [
 ];
 
 const EveningAzkarCounter = [
-  0, 1, 1, 3, 3, 3, 1, 1, 3, 4, 1, 7, 3, 1, 1, 3, 3, 3, 1, 3, 1, 1, 3, 10, 3, 3,
-  3, 3, 100, 1, 100,
+  "",
+  1,
+  1,
+  3,
+  3,
+  3,
+  1,
+  1,
+  3,
+  4,
+  1,
+  7,
+  3,
+  1,
+  1,
+  3,
+  3,
+  3,
+  1,
+  3,
+  1,
+  1,
+  3,
+  10,
+  3,
+  3,
+  3,
+  3,
+  100,
+  1,
+  100,
 ];
 
 const EveningAzkarBasmala = [
@@ -403,6 +547,17 @@ eveningAzkarBtn.onclick = () => {
   nextBtn.addEventListener("click", nextEveningAzkar);
   prevBtn.addEventListener("click", prevEveningAzkar);
   progNum.innerText = `${eveningAzkarIndex} / 30`;
+
+  CounterBtn.onclick = () => {
+    if (CounterBtn.innerText > 0) {
+      CounterBtn.innerText--;
+      EveningAzkarCounter[eveningAzkarCounterIndex]--;
+    }
+
+    if (EveningAzkarCounter[30] === 0) {
+      compeletedEveningAzkar();
+    }
+  };
 };
 
 // !After Pray Azkar
@@ -489,7 +644,7 @@ function nextAfterPrayAzkar() {
   if (afterPrayAzkarIndex < afterPrayAzkar.length - 1) {
     afterPrayAzkarIndex++;
     displayAfterPrayAzkar();
-    progNum.innerText = `${afterPrayAzkarIndex} / 14`;
+    progNum.innerText = `${afterPrayAzkarIndex + 1} / 15`;
   }
   if (afterPrayAzkarInfoIndex < afterPrayAzkarInfo.length - 1) {
     afterPrayAzkarInfoIndex++;
@@ -510,7 +665,7 @@ function prevAfterPrayAzkar() {
   if (afterPrayAzkarIndex > 0) {
     afterPrayAzkarIndex--;
     displayAfterPrayAzkar();
-    progNum.innerText = `${afterPrayAzkarIndex} / 14`;
+    progNum.innerText = `${afterPrayAzkarIndex + 1} / 15`;
   }
   if (afterPrayAzkarInfoIndex > 0) {
     afterPrayAzkarInfoIndex--;
@@ -533,7 +688,16 @@ afterPrayAzkarBtn.onclick = () => {
   displayAfterPrayAzkarInfo();
   nextBtn.addEventListener("click", nextAfterPrayAzkar);
   prevBtn.addEventListener("click", prevAfterPrayAzkar);
-  progNum.innerText = `${afterPrayAzkarIndex} / 14`;
+  progNum.innerText = `${afterPrayAzkarIndex + 1} / 15`;
+  CounterBtn.onclick = () => {
+    if (afterPrayAzkarCounter[14] === 0) {
+      compeletedAftPrayAzkar();
+    }
+    if (CounterBtn.innerText > 0) {
+      CounterBtn.innerText--;
+      afterPrayAzkarCounter[afterPrayAzkarCounterIndex]--;
+    }
+  };
 };
 
 // !Before Sleep Azkar
@@ -676,6 +840,16 @@ befSleepAzkarBtn.onclick = () => {
   nextBtn.addEventListener("click", nextbefSleepAzkar);
   prevBtn.addEventListener("click", prevbefSleepAzkar);
   progNum.innerText = `${befSleepAzkarIndex + 1} / 15`;
+
+  CounterBtn.onclick = () => {
+    if (CounterBtn.innerText > 0) {
+      CounterBtn.innerText--;
+      befSleepAzkarCounter[befSleepAzkarCounterIndex]--;
+    }
+    if (befSleepAzkarCounter[14] === 0) {
+      compeletedBefSleepAzkar();
+    }
+  };
 };
 
 // !After Sleep Azkar
@@ -739,6 +913,16 @@ aftSleepBtn.onclick = () => {
   nextBtn.addEventListener("click", nextaftSleepAzkar);
   prevBtn.addEventListener("click", prevaftSleepAzkar);
   progNum.innerText = `${aftSleepAzkarIndex + 1} / 9`;
+
+  CounterBtn.onclick = () => {
+    if (CounterBtn.innerText > 0) {
+      CounterBtn.innerText--;
+      aftSleepAzkarCounter[aftSleepAzkarCounterIndex]--;
+    }
+    if (aftSleepAzkarCounter[8] === 0) {
+      compeletedAftSleepAzkar();
+    }
+  };
 };
 
 // popups
