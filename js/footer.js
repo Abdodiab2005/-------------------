@@ -130,7 +130,7 @@ infoh2.appendChild(infoi);
 let infoh32 = document.createElement("h3");
 let h2Content = document.createTextNode(` جميع الحقوق محفوظة`);
 let infoh3Content = document.createTextNode("Mazaya Store");
-let infoh32Content = document.createTextNode("Ver 1.3.1");
+let infoh32Content = document.createTextNode("Ver 1.3.2");
 infoh2.appendChild(h2Content);
 infoh3.appendChild(infoh3Content);
 infoh32.appendChild(infoh32Content);
