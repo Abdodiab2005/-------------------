@@ -15,8 +15,17 @@ function sendEmail() {
     From: "mazaya.services.contact@gmail.com",
     Subject: subject.value,
     Body: bodyMsg,
-  }).then((message) => alert(message));
+  }).then(
+    function (message) {
+      alert("Mail sent successfully");
+    },
+    function (error) {
+      console.error("Error:", error);
+      alert("Failed to send email. Please try again later.");
+    }
+  );
 }
+
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
