@@ -10,7 +10,7 @@ function sendEmail() {
   Email.send({
     Host: "smtp.elasticemail.com",
     Username: "mazaya.services.contact@gmail.com",
-    Password: "C81C7D35E001B842FCDF8022DFEF54A659F9",
+    Password: "E9F9831112530A868EAF158B4E37C46B9C70",
     To: "mazaya.services.contact@gmail.com",
     From: "mazaya.services.contact@gmail.com",
     Subject: subject.value,
