@@ -73,7 +73,7 @@ for (let i = 4; i < 7; i++) {
     a.href = "#";
   } else if (i === 5) {
     aContent = document.createTextNode("تواصل معنا");
-    a.href = "#";
+    a.href = "../html/contactUs.html";
   } else if (i === 6) {
     aContent = document.createTextNode("للدعم المادي");
     a.setAttribute("href", "#");

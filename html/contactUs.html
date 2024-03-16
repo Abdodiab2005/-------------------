@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ar">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>تواصل معنا</title>
+    <link rel="icon" type="image/x-icon" href="../photos/head-icon.ico" />
+    <meta
+      name="description"
+      content="تطبيق ونيس المسلم المجاني يحتوي علي جميع الاذكار اليوميه و قسم للتسبيح "
+    />
+    <meta
+      name="keywords"
+      content="Azkar, tasbeeh, Quran, azan, اذكار, تسبيح, ونيس المسلم, قران, تفسير, اذان, مواعيد الاذان, احاديث, islam, wanes elmuslim"
+    />
+    <meta name="author" content="Mazaya" />
+
+    <!-- !custom styling -->
+    <!-- <link rel="stylesheet" href="../css/style.css" /> -->
+    <link rel="stylesheet" href="../css/contactus.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+
+    <!-- *Google fonts  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- *font-awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- *popup library -->
+    <script src="
+    https://cdn.jsdelivr.net/npm/sweetalert2@11.10.5/dist/sweetalert2.all.min.js
+    "></script>
+    <link
+      href="
+    https://cdn.jsdelivr.net/npm/sweetalert2@11.10.5/dist/sweetalert2.min.css
+    "
+      rel="stylesheet"
+    />
+  </head>
+  <body dir="rtl">
+    <section class="contact">
+      <div class="head-text">
+        <h2>برجاء ملء الحقول للتواصل معنا</h2>
+      </div>
+      <form action="#">
+        <div class="input-box">
+          <div class="input-field field">
+            <input
+              type="text"
+              name="text"
+              class="item"
+              id="username"
+              placeholder="الاسم"
+              autocomplete="off"
+            />
+            <div class="error-txt">لا يمكن ترك حقل الاسم فارغاً</div>
+          </div>
+
+          <div class="input-field field">
+            <input
+              type="text"
+              name="email"
+              class="item"
+              id="email"
+              placeholder="البريد الالكتروني"
+              autocomplete="false"
+            />
+            <div class="error-txt">لا سمكن ترك حقل البريد فارغاً</div>
+          </div>
+        </div>
+        <div class="input-box">
+          <div class="input-field field">
+            <input
+              type="text"
+              name="phone"
+              id="phone-number"
+              class="item"
+              placeholder="رقم الهاتف"
+              autocomplete="false"
+            />
+            <div class="error-txt">لا يمكن ترك حقل الهاتف فارغاً</div>
+            <!-- <button class="help-btn">?</button> -->
+          </div>
+
+          <div class="input-field field">
+            <input
+              type="text"
+              name="text"
+              id="subject"
+              class="item"
+              placeholder="الموضوع"
+              autocomplete="false"
+            />
+            <div class="error-txt">لا يمكن ترك حقل الموضوع فارغاً</div>
+          </div>
+        </div>
+
+        <div class="textarea-field field">
+          <textarea
+            name="msg"
+            id="message"
+            cols="20"
+            rows="8"
+            placeholder="أدخل رسالتك "
+            class="item"
+            autocomplete="off"
+          ></textarea>
+          <div class="error-txt">لا يمكن ترك حقل الرساله فارغاً</div>
+        </div>
+        <button type="submit">أرسل رسالتك</button>
+      </form>
+    </section>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="../js/footer.js" type="module"></script>
+    <script src="../js/donation.js" type="module"></script>
+    <script src="../js/contactus.js"></script>
+  </body>
+</html>

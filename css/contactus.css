@@ -1,0 +1,100 @@
+:root {
+  --mc: #027fff;
+  --sc: #2c3e50;
+  --c1: #faf7ef;
+  --c2: #072a40;
+  --c3: #188ca5;
+  --c4: #19b7bd;
+  --c5: #76d668;
+  --c6: #8baccd;
+  --c7: #ff0000;
+  --c8: #0ef;
+  --c9: #333;
+  --c10: #d93025;
+  font-size: 20px;
+}
+* {
+  font-family: "Vazirmatn", sans-serif;
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: var(--c2);
+}
+
+.head-text {
+  h2 {
+    font-size: 40px;
+    color: var(--c1);
+    text-align: center;
+    margin-bottom: 15px;
+  }
+}
+form {
+  width: 600px;
+  text-align: center;
+  .input-box {
+    display: flex;
+    justify-content: space-between;
+    .input-field {
+      width: 48.5%;
+    }
+  }
+  .field {
+    .item {
+      width: 100%;
+      padding: 18px;
+      background: transparent;
+      border: 2px solid var(--c8);
+      outline: none;
+      border-radius: 6px;
+      font-size: 16px;
+      color: var(--c1);
+      margin: 12px 0;
+    }
+    .item::placeholder {
+      color: #ffffff4d;
+    }
+  }
+  .textarea-field {
+    .item {
+      resize: none;
+    }
+  }
+  button {
+    background: var(--c8);
+    color: var(--c9);
+    padding: 12px 32px;
+    font-size: 0.87rem;
+    outline: none;
+    border: none;
+    border-radius: 8px;
+
+    cursor: pointer;
+    transition: 0.3s;
+    font-weight: 700;
+    margin-top: 20px;
+  }
+  button:hover {
+    box-shadow: 0 0 10px var(--c8);
+    scale: 1.05;
+  }
+  .error-txt {
+    font-size: 0.74rem;
+    color: var(--c10);
+    text-align: right;
+    margin: -5px 0 5px;
+    display: none;
+  }
+  .textarea-field .error-txt {
+    margin-top: -10px;
+  }
+}
