@@ -49,6 +49,24 @@
     />
   </head>
   <body dir="rtl">
+    <header dir="ltr">
+      <nav>
+        <input type="checkbox" id="check" />
+        <label for="check" class="checkbtn">
+          <i class="fas fa-bars"></i>
+        </label>
+        <ul>
+          <li><a href="../index.html">الرئيسيه</a></li>
+          <li><a href="tasbeeh.html">تسبيح</a></li>
+          <li><a href="azkar.html" class="active">أذكارك، حصنك</a></li>
+          <li><a href="help.html">المساعده</a></li>
+        </ul>
+        <a class="logo" href="home.html">ونيس المسلم</a>
+      </nav>
+    </header>
+    <aside>
+      <i class="fa-solid fa-arrow-right-from-bracket" id="logout-icon"></i>
+    </aside>
     <section class="contact">
       <div class="head-text">
         <h2>برجاء ملء الحقول للتواصل معنا</h2>
@@ -76,7 +94,7 @@
               placeholder="البريد الالكتروني"
               autocomplete="false"
             />
-            <div class="error-txt">لا سمكن ترك حقل البريد فارغاً</div>
+            <div class="error-txt email">لا يمكن ترك حقل البريد فارغاً</div>
           </div>
         </div>
         <div class="input-box">
@@ -89,7 +107,7 @@
               placeholder="رقم الهاتف"
               autocomplete="false"
             />
-            <div class="error-txt">لا يمكن ترك حقل الهاتف فارغاً</div>
+            <div class="error-txt phone">لا يمكن ترك حقل الهاتف فارغاً</div>
             <!-- <button class="help-btn">?</button> -->
           </div>
 
@@ -116,7 +134,8 @@
             class="item"
             autocomplete="off"
           ></textarea>
-          <div class="error-txt">لا يمكن ترك حقل الرساله فارغاً</div>
+          <div class="counter" id="countWords"></div>
+          <div class="error-txt msg">لا يمكن ترك حقل الرساله فارغاً</div>
         </div>
         <button type="submit">أرسل رسالتك</button>
       </form>
@@ -125,5 +144,6 @@
     <script src="../js/footer.js" type="module"></script>
     <script src="../js/donation.js" type="module"></script>
     <script src="../js/contactus.js"></script>
+    <script src="../js/logic.js"></script>
   </body>
 </html>

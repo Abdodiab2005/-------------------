@@ -65,6 +65,8 @@ form {
     }
   }
   .textarea-field {
+    position: relative;
+
     .item {
       resize: none;
     }
@@ -97,4 +99,23 @@ form {
   .textarea-field .error-txt {
     margin-top: -10px;
   }
+}
+.success-msg-form {
+  color: var(--mc);
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.field.error .item {
+  border-color: var(--c10);
+}
+.field.error .error-txt {
+  display: block;
+}
+
+.counter {
+  position: absolute;
+  bottom: 35px; /* Adjust vertical position as needed */
+  left: 23px; /* Adjust horizontal position as needed */
+  color: var(--c1); /* Adjust color as needed */
 }

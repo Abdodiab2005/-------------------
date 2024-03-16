@@ -81,17 +81,14 @@ userInp.onblur = () => {
     lablName.style.cssText =
       "transform: translateX() translateY(50px);font-size: 25px;font-weight: 600;color: red;";
     userInp.style.cssText = "border-bottom: 2px solid red;";
-    console.log("empty");
   } else if (userInp.value.length > 20) {
     lablName.style.cssText =
       "color: red; transform: translateX(10px) translateY(-50px);font-size: 1rem;font-weight: 600;";
     userInp.style.cssText = "border-bottom: 2px solid red;";
-    console.log(">>20");
   } else {
     lablName.style.cssText =
       "color: green; transform: translateX(10px) translateY(-50px);font-size: 1rem;font-weight: 600;";
     userInp.style.cssText = "border-bottom: 2px solid green;";
-    console.log("valid");
   }
 };
 
