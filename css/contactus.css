@@ -36,6 +36,7 @@ section {
     color: var(--c1);
     text-align: center;
     margin-bottom: 15px;
+    margin-top: 25px;
   }
 }
 form {
@@ -84,6 +85,7 @@ form {
     transition: 0.3s;
     font-weight: 700;
     margin-top: 20px;
+    margin-bottom: 25px;
   }
   button:hover {
     box-shadow: 0 0 10px var(--c8);
