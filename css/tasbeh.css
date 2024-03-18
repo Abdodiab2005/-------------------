@@ -7,7 +7,8 @@
   --c4: #19b7bd;
   --c5: #76d668;
   --c6: #8baccd;
-  --c7: #ff0000;
+  --c7: #d90000;
+  --c13: #208f1d;
   font-size: 20px;
 }
 * {
@@ -60,19 +61,19 @@ section {
   color: var(--c2);
 }
 
-#counterBtns2{
+#counterBtns2 {
   transform: translateY(-90px);
 }
-#counterBtns3{
+#counterBtns3 {
   transform: translateY(-180px);
 }
-#counterBtns4{
+#counterBtns4 {
   transform: translateY(-270px);
 }
-#counterBtns5{
+#counterBtns5 {
   transform: translateY(-360px);
 }
-#counterBtns6{
+#counterBtns6 {
   transform: translateY(-450px);
 }
 
@@ -155,32 +156,46 @@ section {
   display: flex;
   gap: 40px;
 }
-.counter button {
+.counter .resetBtn {
   width: 100px;
   height: 50px;
   border-radius: 11px;
   outline: none;
   border: none;
-  background-color: var(--mc);
+  background-color: var(--c7);
   color: var(--c1);
   font-size: 1.2rem;
   font-weight: 600;
   cursor: pointer;
   transition: 0.3s;
 }
-.counter button:hover {
+.counter .incBtn {
+  width: 100px;
+  height: 50px;
+  border-radius: 11px;
+  outline: none;
+  border: none;
+  background-color: var(--c13);
+  color: var(--c1);
+  font-size: 1.2rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.counter .incBtn:hover,
+.counter .resetBtn:hover {
   scale: 1.2;
 }
 
 @media (max-width: 868px) {
   #tasBtn6 {
     width: 90%;
-    font-size: .85rem;
+    font-size: 0.85rem;
   }
   .selectBtn {
     height: 35px;
   }
-  #SelectedItemContainer2{
+  #SelectedItemContainer2 {
     width: 330px;
     font-size: 0.9rem;
   }

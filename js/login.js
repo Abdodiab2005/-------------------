@@ -76,7 +76,7 @@ userInp.onfocus = () => {
 };
 
 // recolor the field on blur
-userInp.onblur = () => {
+userInp.addEventListener("keyup", () => {
   if (userInp.value === "") {
     lablName.style.cssText =
       "transform: translateX() translateY(50px);font-size: 25px;font-weight: 600;color: red;";
@@ -87,10 +87,10 @@ userInp.onblur = () => {
     userInp.style.cssText = "border-bottom: 2px solid red;";
   } else {
     lablName.style.cssText =
-      "color: green; transform: translateX(10px) translateY(-50px);font-size: 1rem;font-weight: 600;";
-    userInp.style.cssText = "border-bottom: 2px solid green;";
+      "color: rgb(0, 255, 33); transform: translateX(10px) translateY(-50px);font-size: 1rem;font-weight: 600;";
+    userInp.style.cssText = "border-bottom: 2px solid rgb(0, 255, 33);";
   }
-};
+});
 
 // redirect for the home page
 if (localStorage.getItem("UNV")) {

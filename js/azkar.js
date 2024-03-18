@@ -1,9 +1,9 @@
 // Switch Between Azkar
-let morningAzkarBtn = document.getElementById("morningAzkarBtn");
-let eveningAzkarBtn = document.getElementById("EveningAzkarBtn");
-let afterPrayAzkarBtn = document.getElementById("AfterPrayAzkarBtn");
-let befSleepBtn = document.getElementById("befSleepAzkarBtn");
-let aftSleepBtn = document.getElementById("aftSleepAzkarBtn");
+const morningAzkarBtn = document.getElementById("morningAzkarBtn");
+const eveningAzkarBtn = document.getElementById("EveningAzkarBtn");
+const afterPrayAzkarBtn = document.getElementById("AfterPrayAzkarBtn");
+const befSleepBtn = document.getElementById("befSleepAzkarBtn");
+const aftSleepBtn = document.getElementById("aftSleepAzkarBtn");
 
 // Control Buttons
 let nextBtn = document.getElementById("next-Btn");
@@ -304,13 +304,6 @@ function prevMorningAzkar() {
     displayMorningAzkarBasmala();
   }
 }
-
-// Counter Button
-CounterBtn.onclick = () => {
-  // if (morningAzkarCounter[30] === 0) {
-  //   compeletedMorningAzkar();
-  // } else  else   else
-};
 
 // Call the Functions on click Event
 morningAzkarBtn.onclick = () => {

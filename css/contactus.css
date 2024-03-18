@@ -40,13 +40,20 @@ section {
   }
 }
 form {
-  width: 600px;
+  width: 80%;
   text-align: center;
   .input-box {
     display: flex;
     justify-content: space-between;
     .input-field {
       width: 48.5%;
+      input {
+        transition: 0.3s;
+      }
+    }
+
+    .input-field input:focus {
+      box-shadow: 0 0 10px var(--c8);
     }
   }
   .field {
@@ -67,7 +74,12 @@ form {
   }
   .textarea-field {
     position: relative;
-
+    #message {
+      transition: 0.3s;
+    }
+    #message:focus {
+      box-shadow: 0 0 10px var(--c8);
+    }
     .item {
       resize: none;
     }
@@ -80,14 +92,15 @@ form {
     outline: none;
     border: none;
     border-radius: 8px;
-
     cursor: pointer;
-    transition: 0.3s;
+    transition: 0.5s;
     font-weight: 700;
     margin-top: 20px;
     margin-bottom: 25px;
   }
   button:hover {
+    background-color: var(--c9);
+    color: var(--c8);
     box-shadow: 0 0 10px var(--c8);
     scale: 1.05;
   }
@@ -120,4 +133,9 @@ form {
   bottom: 35px; /* Adjust vertical position as needed */
   left: 23px; /* Adjust horizontal position as needed */
   color: var(--c1); /* Adjust color as needed */
+}
+@media (max-width: 1000px) {
+  .head-text h2 {
+    font-size: 1rem;
+  }
 }

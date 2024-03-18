@@ -86,6 +86,7 @@ section {
   align-items: center;
   padding: 10px;
   border-radius: 35px;
+  height: 55px;
 }
 #previous-Btn {
   width: 80px;
@@ -115,6 +116,7 @@ section {
   font-size: 1.5rem;
   transition: 0.4s;
 }
+
 #next-Btn:hover,
 #previous-Btn:hover {
   scale: 1.15;
@@ -248,10 +250,9 @@ section {
   left: 40%;
   top: 35%;
 }
-.surah-title{
+.surah-title {
   color: var(--mc);
 }
-
 
 @media (max-width: 800px) {
   .buttonsContainer {
@@ -320,19 +321,19 @@ section {
     top: 35%;
     left: 20%;
   }
-  .btn{
+  .btn {
     width: 150px;
     height: 50px;
     font-size: 0.85rem;
   }
-  .movementBtnsContainer{
+  .movementBtnsContainer {
     height: 45px;
   }
-  #display-items{
+  #display-items {
     font-size: 0.7rem;
   }
   #next-Btn,
-  #previous-Btn{
+  #previous-Btn {
     font-size: 1rem;
     width: 60px;
     padding-top: 3px;

@@ -47,8 +47,8 @@
       rel="stylesheet"
     />
   </head>
-  <body>
-    <header>
+  <body dir="rtl">
+    <header dir="ltr">
       <nav>
         <input type="checkbox" id="check" />
         <label for="check" class="checkbtn">
@@ -90,18 +90,15 @@
           </div>
         </div>
         <div class="movementBtns">
-          <div class="movementBtnsContainer">
-            <button id="previous-Btn">
-              <i class="fa-solid fa-backward"></i>
+          <div class="movementBtnsContainer" id="btns-container">
+            <button id="next-Btn">
+              <i class="fa-solid fa-forward"></i>
             </button>
             <div class="progress-container">
               <p id="progress-num">0 / 0</p>
-              <!-- <input type="range" id="progress-bar" min="1" max="30" value="1"> -->
             </div>
-
-            <div class="current-progress"></div>
-            <button id="next-Btn">
-              <i class="fa-solid fa-forward"></i>
+            <button id="previous-Btn">
+              <i class="fa-solid fa-backward"></i>
             </button>
           </div>
         </div>
@@ -114,5 +111,7 @@
     <script src="../js/azkar.js"></script>
     <script src="../js/donation.js" type="module"></script>
     <script src="../js/footer.js" type="module"></script>
+    <script src="../js/notifications.js"></script>
+    <script src="../js/notify.js"></script>
   </body>
 </html>

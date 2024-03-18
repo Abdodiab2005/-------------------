@@ -1,0 +1,50 @@
+:root {
+  --mc: #027fff;
+  --sc: #2c3e50;
+  --c1: #faf7ef;
+  --c2: #072a40;
+  --c3: #188ca5;
+  --c4: #19b7bd;
+  --c5: #76d668;
+  --c6: #8baccd;
+  --c7: #ff0000;
+  --c8: #0ef;
+  --c9: #333;
+  --c10: #d93025;
+  font-size: 20px;
+}
+* {
+  padding: 0;
+  margin: 0;
+}
+#feedBack {
+  position: fixed;
+  right: 0;
+  top: 50%;
+  /* transform: rotate(-90deg); */
+  height: 35px;
+  width: 35px;
+  border-radius: 10px 0 0 10px;
+  font-size: 0.8rem;
+  background-color: #0867b475;
+  color: var(--c1);
+  cursor: pointer;
+  z-index: 1;
+  transition: 0.3s;
+  border: 1px solid var(--c1);
+  float: right;
+  text-align: center;
+  overflow: hidden; 
+  white-space: nowrap; /* Prevent line breaks */
+  /* visibility: hidden;  */
+}
+
+#feedBack:hover {
+  /* transform: rotate(-90deg) scale(1.3);  */
+  width: 130px;
+  background-color: var(--c1);
+  color: var(--mc);
+  border: 1px solid var(--mc);
+  visibility: visible; /* Make the text visible on hover */
+  /* transition-delay: 0.3s; */
+}
