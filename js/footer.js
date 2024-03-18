@@ -131,7 +131,7 @@ infoh2.appendChild(h2Content);
 infoh2.appendChild(infoi);
 let infoh32 = document.createElement("h3");
 let infoh3Content = document.createTextNode("Mazaya Store");
-let infoh32Content = document.createTextNode("Ver 1.5.0");
+let infoh32Content = document.createTextNode("Ver 1.5.1");
 infoh3.appendChild(infoh3Content);
 infoh32.appendChild(infoh32Content);
 info.appendChild(infoh2);
