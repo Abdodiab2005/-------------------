@@ -18,7 +18,7 @@
     <!-- !custom styling -->
     <!-- <link rel="stylesheet" href="../css/style.css" /> -->
     <link rel="stylesheet" href="../css/contactus.css" />
-    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/main.css" />
 
     <!-- *Google fonts  -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -49,19 +49,23 @@
     />
   </head>
   <body dir="rtl">
-    <header dir="ltr">
-      <nav>
-        <input type="checkbox" id="check" />
-        <label for="check" class="checkbtn">
-          <i class="fas fa-bars"></i>
-        </label>
-        <ul>
-          <li><a href="../index.html">الرئيسيه</a></li>
-          <li><a href="tasbeeh.html">تسبيح</a></li>
-          <li><a href="azkar.html" >أذكارك، حصنك</a></li>
-          <li><a href="help.html" class="active">المساعده</a></li>
+    <header>
+      <nav id="nav">
+        <div class="logo"><a href="./home.html" id="logo">ونيس المُسلم</a></div>
+        <ul id="ulNav">
+          <li><a href="./home.html" class="navBarLink">الرئيسيه</a></li>
+          <li>
+            <a href="../html/azkar.html" class="navBarLink">أذكارك، حصنك</a>
+          </li>
+          <li><a href="./tasbeeh.html" class="navBarLink">تسبيح</a></li>
+          <li><a href="#" id="navLink2" class="navBarLink">المدونه</a></li>
+          <li><a href="./help.html" class="navBarLink active">المساعده</a></li>
         </ul>
-        <a class="logo" href="home.html">ونيس المسلم</a>
+        <div class="toggle-btn-container" id="toggler">
+          <div class="bars bar1"></div>
+          <div class="bars"></div>
+          <div class="bars"></div>
+        </div>
       </nav>
     </header>
     <aside>

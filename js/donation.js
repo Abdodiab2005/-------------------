@@ -4,28 +4,28 @@ export const donatePopup = () => {
     html: `
       <div class="DonationsContainer" >
           <div class="donateIconContainer" id="donateContainer">
+          <p id="donateId">
+              waneselmuslim@instapay
+          </p>
               <i>
                   <img class="DonateIcon" src="../photos/instapay.ico" alt="instaPay Icon">
               </i>
-              <p id="donateId">
-                  waneselmuslim@instapay
-              </p>
           </div>
           <div class="donateIconContainer" id="donateContainer2"> 
+          <p id="donateId">
+              01558250954
+          </p>
               <i>
                   <img class="DonateIcon" src="../photos/cash icon.ico" alt="Vodafone Cash Icon">
               </i>
-              <p id="donateId">
-                  01558250954
-              </p>
           </div>
           <div class="donateIconContainer" id="paypalDonate">
+          <p>
+              <a href="https://paypal.me/smtaboot?country.x=EG&locale.x=en_US" target="_blank"><p id="donateId">paypal</p></a>
+          </p>
               <i>
                   <img class="DonateIcon" src="../photos/paypal.ico" alt="paypal Icon">
               </i>
-              <p>
-                  <a href="https://paypal.me/smtaboot?country.x=EG&locale.x=en_US" target="_blank"><p id="donateId">paypal</p></a>
-              </p>
           </div>
       </div>
       `,
@@ -71,3 +71,5 @@ export const copyToClipboard = (text) => {
     timer: 2000,
   });
 };
+
+

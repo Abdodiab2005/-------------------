@@ -1,0 +1,370 @@
+:root {
+  --mc: #027fff;
+  --sc: #2c3e50;
+  --c1: #faf7ef;
+  --c2: #072a40;
+  --c3: #188ca5;
+  --c4: #19b7bd;
+  --c5: #76d668;
+  --c6: #8baccd;
+  --c7: #ff0000;
+  --c8: #0ef;
+  --c9: #333;
+  --c10: #d93025;
+  --secColor: #131e1e;
+  --glasscolor: #ffffff28;
+  --bordercolor: #ffffffb2;
+  --headingText: #77b5e7;
+  --btnhovcol: #f8f2e0d3;
+  font-size: 20px;
+}
+* {
+  font-family: "Vazirmatn", sans-serif;
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+body {
+  background-color: #131e1e;
+}
+
+/* * scroll Bar * */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--mc);
+}
+::selection {
+  color: var(--mc);
+  background: var(--secColor);
+}
+
+/* !nav  */
+nav {
+  width: 100%;
+  height: 65px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #000000a8;
+  position: fixed;
+  top: 0;
+  z-index: 5;
+  transition: 0.5s;
+  .logo {
+    margin-right: 25px;
+    padding: 5px 12px 5px 12px;
+    font-size: 1.5rem;
+    transition: 0.5s;
+    a {
+      color: var(--c1);
+    }
+  }
+  ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    margin-left: 25px;
+    li {
+      transition: 0.5s;
+      a {
+        font-size: 1.1rem;
+        padding: 5px 12px 5px 12px;
+        border-radius: 10px;
+        /* background: red; */
+        color: var(--c1);
+        transition: 0.3s;
+      }
+      a.active,
+      a:hover {
+        background-color: var(--c1);
+        color: var(--mc);
+      }
+    }
+  }
+}
+.toggle-btn-container {
+  display: inline-block;
+  display: none;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  left: 0;
+  margin-left: 25px;
+  margin-top: 10px;
+  div {
+    width: 35px;
+    height: 5px;
+    background-color: var(--c1);
+    margin: 6px 0;
+  }
+}
+
+/* !top up button  */
+#top-btn {
+  background-color: var(--mc);
+  color: white;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  bottom: 20px;
+  right: 20px;
+  border: none;
+  position: fixed;
+  cursor: pointer;
+  display: none;
+  transition: 0.3s;
+  z-index: 10;
+  i {
+    width: 100%;
+    height: 100%;
+    font-size: 25px;
+    top: 8px;
+    position: relative;
+  }
+}
+#top-btn:hover {
+  scale: 1.5;
+}
+
+/* !footer  */
+footer {
+  background-color: var(--c6);
+  padding: 80px 13% 80px;
+  position: relative;
+  /* ! All Links in the footer*/
+  a,
+  span {
+    color: var(--c2);
+    font-size: 1rem;
+    margin-right: 10px;
+    transition: 0.5s;
+  }
+  a:hover {
+    color: var(--mc);
+  }
+  /* ! footer Container  */
+  .content-footer {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(50px, auto));
+    text-align: center;
+  }
+
+  /* ! copyright section */
+  .info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* ! social icons  */
+  .icons {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 1.25rem;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    a {
+      padding-left: 10%;
+      padding-right: 10%;
+      font-size: 2rem;
+      transition: 0.3s;
+      #tele {
+        color: #0060e6;
+        transition: 0.3s;
+      }
+      #whats {
+        color: green;
+        transition: 0.3s;
+      }
+      #face {
+        color: blue;
+        transition: 0.3s;
+      }
+    }
+    a:hover {
+      scale: 1.3;
+      #whats {
+        color: #19b204;
+      }
+      #face {
+        color: rgb(14, 87, 222);
+      }
+      #tele {
+        color: dodgerblue;
+      }
+    }
+  }
+
+  /* ! Donation Popup */
+  .DonationsContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    cursor: pointer;
+    .donateIconContainer {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+      margin: 20px;
+      width: 80%;
+      border-radius: 15px;
+      border: 1px solid #9e9d9d91;
+      cursor: pointer;
+      transition: 0.3s;
+      .DonateIcon {
+        width: 50px;
+        height: 50px;
+        cursor: pointer;
+      }
+      p {
+        padding-left: 25px;
+        padding-bottom: 10px;
+        cursor: pointer;
+      }
+      a {
+        color: #545454;
+      }
+      a:visited {
+        color: #545454;
+      }
+    }
+    .donateIconContainer:hover {
+      scale: 1.08;
+    }
+  }
+}
+
+/* * Donate */
+.DonationsContainer {
+  /* background-color: black; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  cursor: pointer;
+  .donateIconContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    margin: 20px;
+    width: 80%;
+    /* background-color: blue; */
+    border-radius: 15px;
+    border: 1px solid #9e9d9d91;
+    cursor: pointer;
+    transition: 0.3s;
+    .DonateIcon {
+      width: 50px;
+      height: 50px;
+      cursor: pointer;
+    }
+    p {
+      padding-left: 25px;
+      padding-bottom: 10px;
+      cursor: pointer;
+      /* background-color: red; */
+    }
+    a {
+      color: #545454;
+    }
+    a:visited {
+      color: #545454;
+    }
+  }
+  .donateIconContainer:hover {
+    scale: 1.08;
+  }
+}
+
+@media (max-width: 890px) {
+  nav {
+    .logo {
+      margin-right: 5px;
+      padding: 2px 5px 2px 5px;
+      font-size: 1rem;
+      transition: 0.5s;
+      position: absolute;
+      right: 10px;
+    }
+    .toggled {
+      transition: 0.5s;
+      display: flex;
+      left: 0;
+    }
+    ul {
+      margin: 0;
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      top: 65px;
+      left: -100%;
+      text-align: center;
+      transition: all 0.5s;
+      display: none;
+      flex-direction: column-reverse;
+      justify-content: flex-end;
+      padding: 35px 0;
+      align-items: center;
+      background-color: var(--c3);
+      li {
+        width: 99%;
+        transition: 0.5s;
+        a {
+          width: 90%;
+          font-size: 1.1rem;
+          padding: 5px 12px 5px 12px;
+          border-radius: 10px;
+          color: var(--c1);
+          transition: 0.3s;
+          width: 80%;
+        }
+        a.active,
+        a:hover {
+          background-color: var(--c1);
+          color: var(--mc);
+        }
+      }
+    }
+  }
+  .toggle-btn-container {
+    display: block;
+    position: fixed;
+  }
+  .change {
+    transition: 0.5s;
+  }
+  .change:first-child {
+    transform: translate(0, 11px) rotate(-45deg);
+  }
+  .change:nth-child(2) {
+    opacity: 0;
+  }
+  .change:last-child {
+    transform: translate(0, -11px) rotate(45deg);
+  }
+  .cBack {
+    background-color: var(--c1);
+  }
+}

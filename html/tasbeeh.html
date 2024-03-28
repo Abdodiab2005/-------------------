@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -36,7 +36,7 @@
     />
 
     <!-- !styling -->
-    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/main.css" />
     <link rel="stylesheet" href="../css/tasbeh.css" />
 
     <!-- *Google Fonts  -->
@@ -49,19 +49,23 @@
   </head>
   <body dir="rtl">
     <!-- !header  -->
-    <header dir="ltr">
-      <nav>
-        <input type="checkbox" id="check" />
-        <label for="check" class="checkbtn">
-          <i class="fas fa-bars"></i>
-        </label>
-        <a class="logo" href="home.html">ونيس المسلم</a>
-        <ul>
-          <li><a href="../index.html">الرئيسيه</a></li>
-          <li><a href="tasbeeh.html" class="active">تسبيح</a></li>
-          <li><a href="azkar.html">أذكارك، حصنك</a></li>
-          <li><a href="help.html">المساعده</a></li>
+    <header>
+      <nav id="nav">
+        <div class="logo"><a href="./home.html" id="logo">ونيس المُسلم</a></div>
+        <ul id="ulNav">
+          <li><a href="./home.html" class="navBarLink">الرئيسيه</a></li>
+          <li>
+            <a href="../html/azkar.html" class="navBarLink">أذكارك، حصنك</a>
+          </li>
+          <li><a href="#" class="navBarLink active">تسبيح</a></li>
+          <li><a href="#" id="navLink2" class="navBarLink">المدونه</a></li>
+          <li><a href="./help.html" class="navBarLink">المساعده</a></li>
         </ul>
+        <div class="toggle-btn-container" id="toggler">
+          <div class="bars bar1"></div>
+          <div class="bars"></div>
+          <div class="bars"></div>
+        </div>
       </nav>
     </header>
     <aside>
@@ -69,8 +73,8 @@
     </aside>
 
     <!-- ?section  -->
-    <section>
-      <div class="selectBtnsContainer">
+    <section class="main">
+      <div class="selectBtnsContainer" id="selectBtnsContainer">
         <button value="سبحان الله" class="selectBtn" id="tasBtn1">
           سبحان الله
         </button>
@@ -94,7 +98,20 @@
           اللهم صلي وسلم وبارك على سيدنا محمد
         </button>
       </div>
-      <div class="SelectedItemContainer1">
+
+      <!-- ! input field  -->
+      <section class="addContainer">
+        <form action="">
+          <input
+            type="text"
+            name="addnewzekr"
+            id="addnewzekr"
+            placeholder="إضافة ذكر جديد"
+          />
+          <input type="submit" value="اضافه" id="addZekrBtn" />
+        </form>
+      </section>
+      <!-- <div class="SelectedItemContainer1">
         <div id="SelectedItemContainer2">
           <p id="SelectedItem"></p>
         </div>
@@ -103,41 +120,56 @@
       <div class="counterContainer1">
         <div id="counterContainer2">
           <div id="SelectedItem2"><p id="counterVal">0</p></div>
-        </div>
-        <div class="counter hide" id="counterBtns1">
-          <div class="buttons">
-            <button class="resetBtn" id="reset1">إعاده</button>
-            <button class="incBtn" id="inc1">+</button>
+        </div> -->
+      <div class="contentContainer">
+        <div class="mainContent">
+          <p class="SelectedItem" id="SelectedItem"></p>
+          <div class="counterContainer">
+            <p class="counterValue" id="counterVal"></p>
           </div>
-        </div>
-        <div class="counter hide" id="counterBtns2">
-          <div class="buttons">
-            <button class="resetBtn" id="reset2">إعاده</button>
-            <button class="incBtn" id="inc2">+</button>
-          </div>
-        </div>
-        <div class="counter hide" id="counterBtns3">
-          <div class="buttons">
-            <button class="resetBtn" id="reset3">إعاده</button>
-            <button class="incBtn" id="inc3">+</button>
-          </div>
-        </div>
-        <div class="counter hide" id="counterBtns4">
-          <div class="buttons">
-            <button class="resetBtn" id="reset4">إعاده</button>
-            <button class="incBtn" id="inc4">+</button>
-          </div>
-        </div>
-        <div class="counter hide" id="counterBtns5">
-          <div class="buttons">
-            <button class="resetBtn" id="reset5">إعاده</button>
-            <button class="incBtn" id="inc5">+</button>
-          </div>
-        </div>
-        <div class="counter hide" id="counterBtns6">
-          <div class="buttons">
-            <button class="resetBtn" id="reset6">إعاده</button>
-            <button class="incBtn" id="inc6">+</button>
+          <div class="btns">
+            <div class="counter" id="counterBtns1">
+              <div class="buttons">
+                <button class="resetBtn" id="reset1">إعاده</button>
+                <button class="incBtn" id="inc1">+</button>
+              </div>
+            </div>
+            <div class="counter hide" id="counterBtns2">
+              <div class="buttons">
+                <button class="resetBtn" id="reset2">إعاده</button>
+                <button class="incBtn" id="inc2">+</button>
+              </div>
+            </div>
+            <div class="counter hide" id="counterBtns3">
+              <div class="buttons">
+                <button class="resetBtn" id="reset3">إعاده</button>
+                <button class="incBtn" id="inc3">+</button>
+              </div>
+            </div>
+            <div class="counter hide" id="counterBtns4">
+              <div class="buttons">
+                <button class="resetBtn" id="reset4">إعاده</button>
+                <button class="incBtn" id="inc4">+</button>
+              </div>
+            </div>
+            <div class="counter hide" id="counterBtns5">
+              <div class="buttons">
+                <button class="resetBtn" id="reset5">إعاده</button>
+                <button class="incBtn" id="inc5">+</button>
+              </div>
+            </div>
+            <div class="counter hide" id="counterBtns6">
+              <div class="buttons">
+                <button class="resetBtn" id="reset6">إعاده</button>
+                <button class="incBtn" id="inc6">+</button>
+              </div>
+            </div>
+            <div class="counter hide" id="counterBtns7">
+              <div class="buttons">
+                <button class="resetBtn" id="reset7">إعاده</button>
+                <button class="incBtn" id="inc7">+</button>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -150,5 +182,7 @@
     <script src="../js/donation.js" type="module"></script>
     <script src="../js/footer.js" type="module"></script>
     <script src="../js/notify.js"></script>
+    <script src="../js/nav.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
   </body>
 </html>
