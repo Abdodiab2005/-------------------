@@ -7,8 +7,15 @@
   --c4: #19b7bd;
   --c5: #76d668;
   --c6: #8baccd;
-  --c7: #d90000;
-  --c13: #208f1d;
+  --c7: #ff0000;
+  --c8: #0ef;
+  --c9: #333;
+  --c10: #d93025;
+  --secColor: #131e1e;
+  --glasscolor: #ffffff28;
+  --bordercolor: #ffffffb2;
+  --headingText: #77b5e7;
+  --btnhovcol: #f8f2e0d3;
   font-size: 20px;
 }
 * {
@@ -32,171 +39,260 @@ body {
   display: block;
 }
 
-section {
-  background-color: var(--c2);
-}
-.selectBtnsContainer {
-  width: 100%;
-  height: 220px;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-wrap: wrap;
-}
-.selectBtn {
-  width: 150px;
-  height: 55px;
-  border-radius: 15px;
-  color: var(--c1);
-  background-color: var(--mc);
-  font-size: 1.1rem;
-  cursor: pointer;
-  border: none;
-  outline: none;
-  transition: 0.3s;
-}
-.selectBtn:hover {
-  scale: 1.15;
-  background-color: var(--c1);
-  color: var(--c2);
-}
+section.main {
+  background-image: url(../photos/bgc6.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  /* min-height: 100vh; */
+  .selectBtnsContainer {
+    margin-top: 32px;
+    height: 40vh;
+    width: 100%;
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex: 1 1 auto;
+    flex-wrap: wrap;
+    .selectBtn {
+      flex-wrap: wrap;
+      padding-top: 10px;
+      width: 21%;
+      height: 50px;
+      font-size: 1.15rem;
+      color: var(--c1);
+      background-color: #ffffff2f;
+      border-radius: 15px;
+      font-weight: 600;
+      border: 1px solid #0000002f;
+      box-shadow: 0 0 10px var(--bordercolor);
+      outline: none;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .selectBtn:hover {
+      scale: 1.1;
+      color: var(--mc);
+      box-shadow: 0 0 15px var(--c1);
+      border: 2px solid var(--mc);
+    }
+  }
+  .contentContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 100%;
+    min-height: 500px;
+    position: relative;
+    .mainContent {
+      height: 350px;
+      width: 75%;
+      background: rgba(255, 255, 255, 0.19);
+      border-radius: 16px;
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(8.7px);
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-content: flex-start;
 
-#counterBtns2 {
-  transform: translateY(-90px);
+      .SelectedItem {
+        background: red;
+        min-height: 60px;
+        width: 80%;
+        margin-top: 25px;
+        border-radius: 25px;
+        background-color: #b1aaaa62;
+        text-align: center;
+        color: var(--c1);
+        font-size: 1.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 0 15px var(--bordercolor);
+        padding: 25px;
+      }
+      .counterContainer {
+        display: flex;
+        width: 100%;
+        height: 50px;
+        align-items: center;
+        justify-content: center;
+        .counterValue {
+          background: var(--glasscolor);
+          width: 15%;
+          height: 100%;
+          border-radius: 0 0 15px 15px;
+          box-shadow: 0 0 15px var(--bordercolor);
+          color: var(--c1);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+      }
+    }
+    .btns {
+      display: flex;
+      flex-direction: column;
+      margin-top: 50px;
+      #counterBtns2 {
+        transform: translateY(-50px) !important;
+      }
+      #counterBtns3 {
+        transform: translateY(-100px);
+      }
+      #counterBtns4 {
+        transform: translateY(-150px);
+      }
+      #counterBtns5 {
+        transform: translateY(-200px);
+      }
+      #counterBtns6 {
+        transform: translateY(-250px);
+      }
+      #counterBtns7 {
+        transform: translateY(-300px);
+      }
+      .counter {
+        .buttons {
+          .incBtn {
+            height: 50px;
+            width: 75px;
+            border-radius: 25px;
+            outline: none;
+            background-color: #00ff2acb;
+            border: 1px solid #00ff2a;
+            box-shadow: 0 0 15px #00ff2a;
+            cursor: pointer;
+            transition: 0.4s;
+            font-size: 1.5rem;
+            color: var(--c1);
+            margin-right: 25px;
+          }
+          .resetBtn {
+            font-size: 1.1rem;
+            color: var(--c1);
+            height: 50px;
+            width: 75px;
+            border-radius: 25px;
+            outline: none;
+            background-color: #ff00008c;
+            border: 1px solid #ff0000d8;
+            box-shadow: 0 0 15px #ff0000d8;
+            cursor: pointer;
+            transition: 0.4s;
+          }
+          .incBtn:hover {
+            scale: 1.1;
+            box-shadow: 0 0 25px #00ff2a;
+            background-color: transparent;
+          }
+          .resetBtn:hover {
+            scale: 1.1;
+            box-shadow: 0 0 25px #ff0000d8;
+            background-color: transparent;
+          }
+        }
+      }
+    }
+  }
 }
-#counterBtns3 {
-  transform: translateY(-180px);
-}
-#counterBtns4 {
-  transform: translateY(-270px);
-}
-#counterBtns5 {
-  transform: translateY(-360px);
-}
-#counterBtns6 {
-  transform: translateY(-450px);
-}
-
 #tasBtn6 {
   width: 50%;
 }
-
-/* Zekr Counter */
-.SelectedItemContainer1 {
-  width: 100%;
-  height: 70px;
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
-  justify-content: center;
-  align-items: center;
-  margin-top: 10px;
-  margin-bottom: 35px;
-}
-#SelectedItemContainer2 {
-  height: 65px;
-  width: 450px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #333333;
-}
-#SelectedItem {
-  width: 90%;
-  height: 65%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #fff;
-  /* From https://css.glass */
-  background: rgba(255, 255, 255, 0.2);
-  border-radius: 16px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
-  border: 1px solid rgba(255, 255, 255, 0.3);
-}
-
-/* Counter */
-
-.counterContainer1 {
-  width: 100%;
-  height: 650px;
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 55px;
-}
-#counterContainer2 {
-  height: 65px;
-  width: 120px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #333333;
-}
-#SelectedItem2 {
-  width: 90%;
-  height: 75%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #fff;
-  /* From https://css.glass */
-  background: rgba(255, 255, 255, 0.2);
-  border-radius: 16px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
-  border: 1px solid rgba(255, 255, 255, 0.3);
-}
-.buttons {
-  display: flex;
-  gap: 40px;
-}
-.counter .resetBtn {
-  width: 100px;
-  height: 50px;
-  border-radius: 11px;
-  outline: none;
-  border: none;
-  background-color: var(--c7);
-  color: var(--c1);
-  font-size: 1.2rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: 0.3s;
-}
-.counter .incBtn {
-  width: 100px;
-  height: 50px;
-  border-radius: 11px;
-  outline: none;
-  border: none;
-  background-color: var(--c13);
-  color: var(--c1);
-  font-size: 1.2rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: 0.3s;
-}
-.counter .incBtn:hover,
-.counter .resetBtn:hover {
-  scale: 1.2;
+section.addContainer {
+  form {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    #addnewzekr {
+      width: 15%;
+      height: 50px;
+      border-radius: 0 25px 25px 0;
+      outline: none;
+      border: none;
+      text-align: right;
+      padding-right: 25px;
+      padding-left: 25px;
+      font-size: 1rem;
+      color: var(--bordercolor);
+      background-color: transparent;
+      border: 1px solid var(--c1);
+      box-shadow: 0 0 5px var(--c1);
+      transition: 0.5s;
+    }
+    #addnewzekr:focus {
+      box-shadow: 0 0 15px var(--c1);
+      width: 35%;
+    }
+    #addZekrBtn {
+      height: 50px;
+      border-radius: 25px 0 0 25px;
+      width: 80px;
+      margin-right: 10px;
+      cursor: pointer;
+      color: var(--c1);
+      font-size: 1rem;
+      font-weight: 600;
+      background-color: transparent;
+      border: 1px solid var(--bordercolor);
+      box-shadow: 0 0 5px var(--c1);
+      transition: 0.5s;
+    }
+    #addZekrBtn:hover {
+      box-shadow: 0 0 15px var(--c1);
+    }
+  }
 }
 
 @media (max-width: 868px) {
-  #tasBtn6 {
-    width: 90%;
-    font-size: 0.85rem;
+  section.main {
+    .selectBtnsContainer {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      min-height: 400px;
+      width: 100%;
+      gap: 15px;
+      .selectBtn,
+      #tasBtn6 {
+        height: 35px;
+        font-size: 0.8rem;
+        width: 80%;
+      }
+    }
+    .contentContainer {
+      .mainContent {
+        .SelectedItem {
+          font-size: 1rem;
+          font-weight: 600;
+        }
+        .counterContainer {
+          font-size: 0.8rem;
+          font-weight: 600;
+        }
+      }
+    }
   }
-  .selectBtn {
-    height: 35px;
-  }
-  #SelectedItemContainer2 {
-    width: 330px;
-    font-size: 0.9rem;
+  section.addContainer {
+    form {
+      #addnewzekr {
+        width: 30%;
+        height: 35px;
+      }
+      #addnewzekr:focus {
+        width: 50%;
+      }
+      #addZekrBtn {
+        height: 35px;
+        width: 65px;
+        font-size: 0.8rem;
+      }
+    }
   }
 }

@@ -21,121 +21,133 @@
   list-style: none;
   box-sizing: border-box;
 }
-section {
+.contact {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
   background: var(--c2);
-}
-
-.head-text {
-  h2 {
-    font-size: 40px;
-    color: var(--c1);
-    text-align: center;
-    margin-bottom: 15px;
-    margin-top: 25px;
-    padding-left: 25px;
-    padding-right: 25px;
+  .head-text {
+    h2 {
+      font-size: 40px;
+      color: var(--c1);
+      text-align: center;
+      margin-bottom: 15px;
+      margin-top: 25px;
+      padding-left: 25px;
+      padding-right: 25px;
+    }
   }
-}
-form {
-  width: 80%;
-  text-align: center;
-  .input-box {
-    display: flex;
-    justify-content: space-between;
-    .input-field {
-      width: 48.5%;
-      input {
-        transition: 0.3s;
+  form {
+    width: 80%;
+    text-align: center;
+
+    /* ? Input Containers */
+    .input-box {
+      display: flex;
+      justify-content: space-between;
+      .input-field {
+        width: 48.5%;
+        input {
+          transition: 0.3s;
+        }
+      }
+
+      /* * Focus Shadow Effect * */
+      .input-field input:focus {
+        box-shadow: 0 0 10px var(--c8);
       }
     }
 
-    .input-field input:focus {
-      box-shadow: 0 0 10px var(--c8);
+    /* ? Input Fields */
+    .field {
+      .item {
+        width: 100%;
+        padding: 18px;
+        background: transparent;
+        border: 2px solid var(--c8);
+        outline: none;
+        border-radius: 6px;
+        font-size: 16px;
+        color: var(--c1);
+        margin: 12px 0;
+      }
+      .item::placeholder {
+        color: #ffffff4d;
+      }
     }
-  }
-  .field {
-    .item {
-      width: 100%;
-      padding: 18px;
-      background: transparent;
-      border: 2px solid var(--c8);
+
+    /* * Message Field */
+    .textarea-field {
+      position: relative;
+
+      /* ! Input Field */
+      #message {
+        resize: none;
+        transition: 0.3s;
+      }
+      #message:focus {
+        box-shadow: 0 0 10px var(--c8);
+      }
+
+      /* ? Counter For Message */
+      .counter {
+        position: absolute;
+        bottom: 35px;
+        left: 23px;
+        color: var(--c1);
+      }
+    }
+
+    /* ? Submit Button */
+    button {
+      background: var(--c8);
+      color: var(--c9);
+      padding: 12px 32px;
+      font-size: 0.87rem;
       outline: none;
-      border-radius: 6px;
-      font-size: 16px;
-      color: var(--c1);
-      margin: 12px 0;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.5s;
+      font-weight: 700;
+      margin-top: 20px;
+      margin-bottom: 25px;
     }
-    .item::placeholder {
-      color: #ffffff4d;
-    }
-  }
-  .textarea-field {
-    position: relative;
-    #message {
-      transition: 0.3s;
-    }
-    #message:focus {
+    button:hover {
+      background-color: var(--c9);
+      color: var(--c8);
       box-shadow: 0 0 10px var(--c8);
+      scale: 1.05;
     }
-    .item {
-      resize: none;
+
+    /* ! Error Txt  */
+    .error-txt {
+      font-size: 0.74rem;
+      color: var(--c10);
+      text-align: right;
+      margin: -5px 0 5px;
+      display: none;
     }
-  }
-  button {
-    background: var(--c8);
-    color: var(--c9);
-    padding: 12px 32px;
-    font-size: 0.87rem;
-    outline: none;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: 0.5s;
-    font-weight: 700;
-    margin-top: 20px;
-    margin-bottom: 25px;
-  }
-  button:hover {
-    background-color: var(--c9);
-    color: var(--c8);
-    box-shadow: 0 0 10px var(--c8);
-    scale: 1.05;
-  }
-  .error-txt {
-    font-size: 0.74rem;
-    color: var(--c10);
-    text-align: right;
-    margin: -5px 0 5px;
-    display: none;
-  }
-  .textarea-field .error-txt {
-    margin-top: -10px;
+    .textarea-field .error-txt {
+      margin-top: -10px;
+    }
+    .field.error .item {
+      border-color: var(--c10);
+    }
+    .field.error .error-txt {
+      display: block;
+    }
   }
 }
+
 .success-msg-form {
   color: var(--mc);
   font-size: 0.9rem;
   font-weight: 600;
 }
 
-.field.error .item {
-  border-color: var(--c10);
-}
-.field.error .error-txt {
-  display: block;
-}
-
-.counter {
-  position: absolute;
-  bottom: 35px; /* Adjust vertical position as needed */
-  left: 23px; /* Adjust horizontal position as needed */
-  color: var(--c1); /* Adjust color as needed */
-}
 @media (max-width: 1000px) {
   .head-text h2 {
     font-size: 1rem;

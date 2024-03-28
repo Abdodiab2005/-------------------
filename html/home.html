@@ -16,7 +16,8 @@
     <meta name="author" content="Mazaya" />
 
     <!-- !Custom Styles -->
-    <link rel="stylesheet" href="../css/style.css" />
+    <!-- <link rel="stylesheet" href="../css/style.css" /> -->
+    <link rel="stylesheet" href="../css/main.css" />
     <link rel="stylesheet" href="../css/home.css" />
     <link rel="stylesheet" href="../css/feedbackbtn.css" />
 
@@ -50,46 +51,328 @@
   </head>
   <body dir="rtl">
     <!-- !header  -->
-    <header dir="ltr">
-      <nav>
-        <input type="checkbox" id="check" />
-        <label for="check" class="checkbtn">
-          <i class="fas fa-bars"></i>
-        </label>
-        <a class="logo" href="home.html">ونيس المسلم</a>
-        <ul>
-          <li><a href="../index.html" class="active">الرئيسيه</a></li>
-          <li><a href="tasbeeh.html">تسبيح</a></li>
-          <li><a href="azkar.html">أذكارك، حصنك</a></li>
-          <li><a href="help.html">المساعده</a></li>
+    <header>
+      <nav id="nav">
+        <div class="logo"><a href="./home.html" id="logo">ونيس المُسلم</a></div>
+        <ul id="ulNav">
+          <li><a href="#" class="navBarLink active">الرئيسيه</a></li>
+          <li><a href="./azkar.html" class="navBarLink">أذكارك، حصنك</a></li>
+          <li><a href="./tasbeeh.html" class="navBarLink">تسبيح</a></li>
+          <li><a href="#" id="navLink2" class="navBarLink">المدونه</a></li>
+          <li><a href="./help.html" class="navBarLink">المساعده</a></li>
         </ul>
+        <div class="toggle-btn-container" id="toggler">
+          <div class="bars bar1"></div>
+          <div class="bars"></div>
+          <div class="bars"></div>
+        </div>
       </nav>
     </header>
-    <aside>
+    <!-- <aside>
       <i class="fa-solid fa-arrow-right-from-bracket" id="logout-icon"></i>
-    </aside>
+    </aside> -->
 
-    <section>
-      <h1 class="helloMsg">مرحباً بك في تطبيق ونيس المسلم</h1>
-      <div class="tasbehSec">
-        <p class="paraMsg">يمكنك الآن استخدام السبحه عن طريق الذاكره المحليه</p>
-        <p class="paraMsg">
-          حيث يمكنك إغلاق الصفحه و العوده في أي وقت مع وجود العدد كما هو
+    <section id="scene">
+      <h2 id="text">
+        ونيس المُسلم
+        <br />
+        رمضان مُبارك
+      </h2>
+      <img src="../photos/01.png" alt="img1" id="img1" />
+      <img src="../photos/02.png" alt="img2" id="img2" />
+      <img src="../photos/03.png" alt="img3" id="img3" />
+      <img src="../photos/04.png" alt="img4" id="img4" />
+    </section>
+
+    <section class="sec2" id="sec2">
+      <!-- ! Parts  -->
+      <aside class="left-side">
+        <h2>الاقسام</h2>
+        <p>
+          <a href="#container">مواقيت الصلاه</a>
+          <a href="#container1">التسبيح</a>
+          <a href="#container2">الاذكار</a>
+          <span>انتظروا المزيد قريباً</span>
         </p>
-        <div class="imgContainer">
-          <img class="img1" src="../photos/5.jpg" alt="screenshot1" />
-          <img class="img2" src="../photos/3.png" alt="screenshot2" />
+      </aside>
+
+      <!-- ? salah -->
+      <div class="container" id="container">
+        <h2 class="heading-text">مواقيت الصلاة</h2>
+        <p class="body-text">
+          الصلاة هي ثاني أركان الإسلام وعمود الدين الإسلامي. إن صَلُحَت صلاة
+          المسلم، صَلُحَت أعماله وعبادته <br />
+          <br />
+          <strong> الصلاه هي أفضلُ الأعمال بعد الشهادتين:</strong> لِجواب النبيّ
+          -عليه الصلاةُ والسلام- عندما سُئل عن أفضل الأعمال: “أيُّ العَمَلِ
+          أفْضَلُ؟” قالَ: الصَّلاةُ لِوَقْتِها. ثمَّ أيٌّ؟ قالَ: برُّ
+          الوالِدَيْنِ. ثمَّ أيٌّ؟ قالَ: الجِهادُ في سَبيلِ اللَّهِ <br />
+          <strong>ضيافةً وكرامةً في الجنّة:</strong> من يمشي إلى الصلاة، يُعِدُّ
+          اللَّهُ له نُزُلَهُ مِنَ الجَنَّةِ كُلَّما غَدَا أوْ رَاحَ بالإضافةِ
+          <br />
+          <br />
+        </p>
+        <span id="dots">...</span>
+        <div id="more" style="display: none">
+          <p class="body-text more-para">
+            إلى أنَّ الملائكة تُصلّي على الإنسان مادام في مُصلّاه. <br />
+            <br /><strong>الاعتزاز بالله والبُعد عن الدُنيا:</strong> الصلاة
+            تُعين على الابتعاد عن مظاهر الدُنيا ومُغرياتِها، وهي نورٌ لِصاحبها
+            في الدُنيا والآخِرة.
+            <br />
+            <strong>الراحة النفسيّة والطمأنينةَ الروحيّة: </strong> الصلاة تحقق
+            الراحة النفسيّة وتُبعث الطمأنينة في القلب. <br />
+            <strong>الأجر العظيم والتكفير عن السيّئات: </strong> الصلاة تكتب
+            للإنسان مُنذُ خروجهِ من بيته حتى يرجعَ إليه <br />
+            تُحطُّ الخطايا وتكونُ سبباً لِدخولِ صاحبها الجنّة.<br />
+          </p>
+          <p class="body-text more-para">
+            وَأَقِيمُواْ الصَّلاَةَ وَآتُواْ الزَّكَاةَ وَارْكَعُواْ مَعَ
+            الرَّاكِعِينَ <strong>{سورة البقره: 43}</strong>
+          </p>
+          <p class="body-text more-para">
+            وَأَقِمِ الصَّلَاةَ ۖ إِنَّ الصَّلَاةَ تَنْهَىٰ عَنِ الْفَحْشَاءِ
+            وَالْمُنكَرِ ۗ وَلَذِكْرُ اللَّهِ أَكْبَرُ ۗ وَاللَّهُ يَعْلَمُ مَا
+            تَصْنَعُونَ <br /><strong>{سورة العنكبوت: 45}</strong>
+          </p>
+          <p class="body-text more-para">
+            إِنَّ الصَّلَاةَ كَانَتْ عَلَى الْمُؤْمِنِينَ كِتَابًا مَّوْقُوتًا
+            <strong>{سورة النساء: 103}</strong>
+          </p>
         </div>
-        <button id="go1">اذهب</button>
+
+        <!-- *Buttons -->
+        <button onclick="showMore()" id="showMore" class="readMoreBtn">
+          قراءة المزيد
+        </button>
+        <button id="prayTimeBtn" class="actionBtn">
+          الذهاب الى مواقيت الصلاه
+        </button>
+        <div class="MreadContainer">
+          <button class="MreadMore" id="prayTimeBtn1">قراءة المزيد</button>
+        </div>
+
+        <iframe
+          style="border: 1px solid #ddd"
+          scrolling="no"
+          src="https://www.islamicfinder.org/prayer-widget/"
+        >
+        </iframe>
       </div>
-      <hr />
-      <div class="tasbehSec">
-        <p class="paraMsg">أذكارك هي حصنك المنيع</p>
-        <p class="paraMsg">تم إضافة الاذكار مع اضافة عداد + فضل كل ذكر</p>
-        <div class="imgContainer">
-          <img class="img4" src="../photos/7.jpg" alt="screenshot1" />
+
+      <!-- ! Follow US  -->
+      <aside class="socialPart">
+        <h2>انضم الينا</h2>
+        <p>
+          <a href="https://t.me/wanes_elmoslem"
+            ><i class="fa-brands fa-telegram"></i
+          ></a>
+          <a href="https://whatsapp.com/channel/0029VaUFu9WD38CULjlAsC0c"
+            ><i class="fa-brands fa-whatsapp"></i
+          ></a>
+          <a href="https://www.facebook.com/groups/2042659169460891/"
+            ><i class="fa-brands fa-facebook"></i
+          ></a>
+        </p>
+      </aside>
+
+      <!-- ? tasbeh -->
+      <div class="container" id="container1">
+        <h2 class="heading-text">التسبيح</h2>
+        <p class="body-text">
+          التسبيح له فضل عظيم وفوائد متعددة على المؤمن الذاكر. دعوني أشارك ببعض
+          هذه الفوائد:
+          <br />
+          <strong>محبة الله: </strong> التسبيح من أحب الكلمات إلى الله تعالى.
+          <br />
+          <strong>ثقيل في الميزان: </strong> يعتبر ثقيلًا في ميزان الحسنات يوم
+          القيامة. <br />
+          <strong>تكفير الذنوب: </strong>يعمل كسبب لمغفرة الذنوب والخطايا.
+          <br />
+          <strong>علو الدرجات في الآخرة: </strong> يساهم في رفع مكانة المؤمن في
+          الجنة. <br />
+          <strong>أعظم من الصدقة: </strong>يعتبر أفضل من الصدقة. <br />
+          <strong>غرس الجنة: </strong> كلما سبّح المسلم، غُرست له في الجنة غراسٌ
+          بقدر تسبيحه . <br />
+        </p>
+        <span id="dots1">...</span>
+        <div id="more1" style="display: none">
+          <p class="body-text" more-para>
+            بالإضافة إلى ذلك، التسبيح يعد أيضًا من أسباب مغفرة الذنوب، ويفتح
+            أبواب السماء، ويجلب القبول من الله. لذا، دعونا نكثف من تسبيح الله
+            واستغفاره في حياتنا اليومية. 🌟
+          </p>
+          <p class="body-text more-para">
+            وَمَا كَانَ اللَّهُ لِيُعَذِّبَهُمْ وَأَنتَ فِيهِمْ ۚ وَمَا كَانَ
+            اللَّهُ مُعَذِّبَهُمْ وَهُمْ يَسْتَغْفِرُونَ
+            <strong>{الأنفال: 33} </strong> <br />
+            وَالَّذِينَ إِذَا فَعَلُوا فَاحِشَةً أَوْ ظَلَمُوا أَنفُسَهُمْ
+            ذَكَرُوا اللَّهَ فَاسْتَغْفَرُوا لِذُنُوبِهِمْ وَمَن يَغْفِرُ
+            الذُّنُوبَ إِلَّا اللَّهُ وَلَمْ يُصِرُّوا عَلَىٰ مَا فَعَلُوا
+            وَهُمْ يَعْلَمُونَ <strong>{آل عمران: 135} </strong> <br />
+            وَمَن يَعْمَلْ سُوءًا أَوْ يَظْلِمْ نَفْسَهُ ثُمَّ يَسْتَغْفِرِ
+            اللَّهَ يَجِدِ اللَّهَ غَفُورًا رَّحِيمًا
+            <strong>{النساء: 110} </strong> <br />
+          </p>
         </div>
-        <button id="go2">اذهب</button>
+
+        <!-- *buttons -->
+        <button onclick="showMore1()" id="showMore1" class="readMoreBtn">
+          قراءة المزيد
+        </button>
+        <button class="actionBtn" id="tasbehBtnRed">الذهاب الى المسبحة</button>
+        <div class="MreadContainer">
+          <button class="MreadMore" id="tasbehBtnRed1">قراءة المزيد</button>
+        </div>
+      </div>
+
+      <aside class="donate">
+        <div class="text">
+          للدعم المادي
+          <br />
+          <span>ساهم معنا لشراء دومين جديد والمساعده في تطوير الموقع</span>
+        </div>
+        <div class="DonationsContainer" id="donContainer">
+          <button id="GoDonate">للدعم المادي اضغط هنا</button>
+        </div>
+      </aside>
+
+      <!-- ? Azkar  -->
+      <div class="container container2" id="container2">
+        <h2 class="heading-text">أذكارك، حصنك</h2>
+        <p class="body-text">
+          أذكار الصباح والمساء لها فوائد عظيمة في الحياة اليومية للمسلمين. دعونا
+          نشارك بعض هذه الفوائد:-
+          <br />
+          <br />
+          <strong>رضى الله:</strong> الاحتفاظ بأذكار الصباح والمساء يكسب رضى
+          الله سبحانه وتعالى. <br />
+
+          <strong>زيادة الرزق: </strong> تجلب الرزق للمسلم الملتزم بها. <br />
+          <strong>الطمأنينة والراحة النفسية: </strong> تريح القلب وتنشر
+          الطمأنينة والراحة النفسية في قلب المسلم. <br />
+          <strong>طرد الشيطان: </strong> تطرد الشيطان وتعيذ المسلم منه. <br />
+        </p>
+        <span id="dots2">...</span>
+        <div id="more2" style="display: none">
+          <p class="body-text more-para">
+            <strong>الاستشعار بعظمة الله: </strong> تمنح القلب الاستشعار بعظمة
+            الخالق جل جلاله. <br />
+          </p>
+          <p class="body-text more-para">
+            <br />
+            الَّذِينَ آمَنُوا وَتَطْمَئِنُّ قُلُوبُهُم بِذِكْرِ اللَّهِ أَلَا
+            بِذِكْرِ اللَّهِ تَطْمَئِنُّ الْقُلُوبُ <br />
+            <strong> {الرعد:28} </strong>
+          </p>
+          <p class="body-text more-para">
+            <strong>وقال شيخ الإسلام ابن تيمية:</strong> “الذكر للقلب مثل الماء
+            للسمك، فكيف يكون حال السمك إذا فقد الماء؟!”
+          </p>
+          <p class="body-text more-para">
+            فعلاً، الأذكار هي روح الإسلام ووسيلة للتقرب إلى الله تعالى. دعونا
+            نحافظ عليها ونستمر في ذكر الله في كل الأوقات. 🌟🤲
+          </p>
+        </div>
+
+        <!-- *buttons -->
+        <button onclick="showMore2()" id="showMore2" class="readMoreBtn">
+          قراءة المزيد
+        </button>
+        <button class="actionBtn" id="AzkarBtnRed">
+          الذهاب لقراءة الأذكار
+        </button>
+        <div class="MreadContainer">
+          <button class="MreadMore" id="AzkarBtnRed1">قراءة المزيد</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ! Contact US Section  -->
+    <section class="contact" id="contact">
+      <div class="content">
+        <!-- ! title  -->
+        <div class="head-text">
+          <h2>يمكنك مشاركتنا برآيك / استفسارك عن طريق ملئ الحقول التاليه</h2>
+        </div>
+
+        <!-- * All Inputs -->
+        <form action="#">
+          <!-- ? name field + E-mail  -->
+          <div class="input-box">
+            <!-- ? name field  -->
+            <div class="input-field field">
+              <input
+                type="text"
+                name="text"
+                class="item"
+                id="username"
+                placeholder="الاسم"
+                autocomplete="off"
+              />
+              <div class="error-txt">لا يمكن ترك حقل الاسم فارغاً</div>
+            </div>
+
+            <!-- ? E-mail field  -->
+            <div class="input-field field">
+              <input
+                type="text"
+                name="email"
+                class="item"
+                id="email"
+                placeholder="البريد الالكتروني"
+                autocomplete="false"
+              />
+              <div class="error-txt email">لا يمكن ترك حقل البريد فارغاً</div>
+            </div>
+          </div>
+
+          <!-- ? Phone + Subject  -->
+          <div class="input-box">
+            <!-- ? phone filed  -->
+            <div class="input-field field">
+              <input
+                type="text"
+                name="phone"
+                id="phone-number"
+                class="item"
+                placeholder="رقم الهاتف"
+                autocomplete="false"
+              />
+              <div class="error-txt phone">لا يمكن ترك حقل الهاتف فارغاً</div>
+              <!-- <button class="help-btn">?</button> -->
+            </div>
+
+            <!-- ? Subject field  -->
+            <div class="input-field field">
+              <input
+                type="text"
+                name="text"
+                id="subject"
+                class="item"
+                placeholder="الموضوع"
+                autocomplete="false"
+              />
+              <div class="error-txt">لا يمكن ترك حقل الموضوع فارغاً</div>
+            </div>
+          </div>
+
+          <!-- ? Message Field  -->
+          <div class="textarea-field field">
+            <textarea
+              name="msg"
+              id="message"
+              cols="20"
+              rows="8"
+              placeholder="أدخل رسالتك "
+              class="item"
+              autocomplete="off"
+            ></textarea>
+            <div class="counter" id="countWords"></div>
+            <div class="error-txt msg">لا يمكن ترك حقل الرساله فارغاً</div>
+          </div>
+          <button type="submit">أرسل رسالتك</button>
+        </form>
       </div>
     </section>
 
@@ -99,7 +382,8 @@
     <script src="../js/main.js"></script>
     <script src="../js/donation.js" type="module"></script>
     <script src="../js/footer.js" type="module"></script>
-    <script src="../js/feedback.js"></script>
+    <script src="../js/donatePopup.js" type="module"></script>
+    <script src="../js/contactus.js"></script>
     <script src="../js/notify.js"></script>
   </body>
 </html>
